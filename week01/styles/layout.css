@@ -1,77 +1,56 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-rows: auto auto 1fr auto;
-    grid-template-areas:
-        "header"
-        "nav"
-        "main"
-        "footer";
-    min-height: 100vh;
-    background-color: #708090;
-    /* Smoky grey background */
+  font-family: Arial, sans-serif; 
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas: 
+  "header header"
+  "main aside"
+  "footer footer";
+  min-height: 100vh;
+  background-color: aquamarine;
+  margin: 0;
+  padding: 0;
+  gap: 0;
 }
-
+/* Header Styles */
 header {
     grid-area: header;
-    background-color: palevioletred;
-    padding: 25px;
-    text-align: left;
-    font-size: 30px;
-}
-
-nav {
-    grid-area: nav;
-    background-color: snow;
-    padding: 10px;
+    background-color: purple;
+    color: black;
     font-size: 20px;
+    padding: 2rem;
 }
-
-nav ul {
+/* Navigation Styles */
+nav {
     display: flex;
     justify-content: space-around;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+    background-color: limegreen;
+    padding: 1rem;
 }
-
-nav ul li a {
-    text-decoration: none;
+nav a {
     color: blue;
-    font-weight: none;
+    text-decoration: none;
 }
-
+/* Main Content Styles */
 main {
     grid-area: main;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 0;
-    padding: 0;
+    background-color: #ccc;
+    padding: 1rem;
 }
-
-.main-content {
-    background-color: silver;
-    /* Lemon green for main content */
-    padding: 20px;
+aside {
+    grid-area: aside;
+    background-color: #eee;
+    padding: 1rem;
 }
-
-.aside-content {
-    background-color: springgreen;
-    /* Light blue for aside content */
-    padding: 20px;
-}
-
+/* Footer Styles */
 footer {
     grid-area: footer;
-    background-color: #DDA0DD;
-    /* Light purple for footer */
+    background-color: #DDA0DD; /* Light purple for footer */
     color: blue;
     text-align: center;
-    padding: 40px;
+    padding: 50px;
 }
-
 /* Responsive design */
 @media (max-width: 768px) {
     main {
