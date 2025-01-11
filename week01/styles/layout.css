@@ -1,61 +1,77 @@
-/* Basic reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: Arial, sans-serif;
-}
-
-.container {
+    margin: 0;
+    padding: 0;
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: auto 1fr auto;
-    height: 100vh;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "footer";
+    min-height: 100vh;
+    background-color: #708090; /* Smoky grey background */
 }
 
-.header {
-    grid-column: 1 / -1;
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
+header {
+    grid-area: header;
+    background-color: purple;
+    padding: 30px;
+    text-align: left;
+    font-size: 32px;
+}
+
+nav {
+    grid-area: nav;
+    background-color: forestgreen;
+    padding: 10px;
+    font-size: 16px;
+}
+
+nav ul {
     display: flex;
     justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
-.header a {
-    color: #fff;
+nav ul li a {
     text-decoration: none;
-    padding: 0.5rem;
+    color: blue;
+    font-weight: bold;
 }
 
-.header a:hover {
-    background-color: #555;
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 0px;
+    padding: 0px;
 }
 
 .main-content {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-    background-color: #add8e6;
-    /* Light blue */
-    padding: 2rem;
+    background-color: #90EE90; /* Lemon green for main content */
+    padding: 20px;
 }
 
 .aside-content {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-    background-color: #90ee90;
-    /* Green */
-    padding: 2rem;
+    background-color: #ADD8E6; /* Light blue for aside content */
+    padding: 20px;
 }
 
-.footer {
-    grid-column: 1 / -1;
-    background-color: #ffff00;
-    /* Yellow */
-    color: #333;
-    padding: 1rem;
+footer {
+    grid-area: footer;
+    background-color: #DDA0DD; /* Light purple for footer */
+    color: blue;
     text-align: center;
+    padding: 40px;
 }
+
+/* Responsive design */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+}
+
