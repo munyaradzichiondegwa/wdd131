@@ -4,13 +4,14 @@ body {
     padding: 0;
     display: grid;
     grid-template-rows: auto auto 1fr auto;
-    grid-template-areas: 
+    grid-template-areas:
         "header"
         "nav"
         "main"
         "footer";
     min-height: 100vh;
-    background-color: #708090; /* Smoky grey background */
+    background-color: #708090;
+    /* Smoky grey background */
 }
 
 header {
@@ -23,7 +24,7 @@ header {
 
 nav {
     grid-area: nav;
-    background-color: color-mix(in hwb longer hue, color percentage, color percentage);
+    background-color: snow;
     padding: 10px;
     font-size: 20px;
 }
@@ -39,7 +40,7 @@ nav ul {
 nav ul li a {
     text-decoration: none;
     color: blue;
-    font-weight: bold;
+    font-weight: none;
 }
 
 main {
@@ -51,18 +52,21 @@ main {
 }
 
 .main-content {
-    background-color: silver; /* Lemon green for main content */
+    background-color: silver;
+    /* Lemon green for main content */
     padding: 20px;
 }
 
 .aside-content {
-    background-color: springgreen; /* Light blue for aside content */
+    background-color: springgreen;
+    /* Light blue for aside content */
     padding: 20px;
 }
 
 footer {
     grid-area: footer;
-    background-color: #DDA0DD; /* Light purple for footer */
+    background-color: #DDA0DD;
+    /* Light purple for footer */
     color: blue;
     text-align: center;
     padding: 40px;
