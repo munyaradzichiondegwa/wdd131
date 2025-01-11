@@ -1,14 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> WDD 131</title>
+    <title>WDD 131 - Dynamic Web Fundamentals - Munyaradzi Chiondegwa</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals by Munyaradzi Chiondegwa. Web development course exploring dynamic web technologies, JavaScript, and responsive design.">
+    <meta name="author" content="Munyaradzi Chiondegwa">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
 </head>
-
 <body>
-    <h1>WDD 131 - MUNYARADZI CHIONDEGWA</h1>
-</body>
+    <header>
+        <h1>WDD 131: Dynamic Web Fundamentals</h1>
+        <nav>
+            <a href="https://www.linkedin.com/in/bloodshed-munyaradzi-chiondegwa-84798a2b7/">LinkedIn</a>
+            <a href="https://byupw.instructure.com/">Canvas</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7">Scripture</a>
+            <a href="#">Final Project</a>
+        </nav>
+    </header>
 
+    <main>
+        <section class="card">
+            <h2>Learning Web Development</h2>
+            <img src="images/web-dev.jpg" alt="Web Development Tools">
+            <p>Exploring the fundamentals of dynamic web technologies, responsive design, and interactive web experiences.</p>
+        </section>
+
+        <section class="card">
+            <h2>Course Goals</h2>
+            <img src="images/goals.jpg" alt="Development Goals">
+            <p>Master JavaScript, understand responsive design principles, and create engaging, user-friendly web interfaces.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Munyaradzi Chiondegwa | Zimbabwe</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
 </html>
