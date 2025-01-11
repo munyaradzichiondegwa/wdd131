@@ -15,17 +15,17 @@ body {
 
 header {
     grid-area: header;
-    background-color: purple;
-    padding: 30px;
+    background-color: palevioletred;
+    padding: 25px;
     text-align: left;
-    font-size: 32px;
+    font-size: 30px;
 }
 
 nav {
     grid-area: nav;
-    background-color: forestgreen;
+    background-color: color-mix(in hwb longer hue, color percentage, color percentage);
     padding: 10px;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 nav ul {
@@ -46,17 +46,17 @@ main {
     grid-area: main;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 0px;
-    padding: 0px;
+    gap: 0;
+    padding: 0;
 }
 
 .main-content {
-    background-color: #90EE90; /* Lemon green for main content */
+    background-color: silver; /* Lemon green for main content */
     padding: 20px;
 }
 
 .aside-content {
-    background-color: #ADD8E6; /* Light blue for aside content */
+    background-color: springgreen; /* Light blue for aside content */
     padding: 20px;
 }
 
@@ -74,4 +74,3 @@ footer {
         grid-template-columns: 1fr;
     }
 }
-
