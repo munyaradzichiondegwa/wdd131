@@ -1,13 +1,18 @@
+/* Add this line to apply the font to the entire body */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+/* Your existing CSS rules */
+body {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: skyblue;
 }
 
 header {
-    background-color: navy;
-    color: #fff;
+    background-color: #333;
+    color: purple;
     padding: 10px 0;
     text-align: center;
 }
@@ -24,18 +29,18 @@ nav ul {
     display: flex;
     justify-content: space-around;
     list-style: none;
-    background-color: black;
+    background-color: grey;
     padding: 0.5rem;
 }
 
 nav ul li {
-    margin: 0 10px;
+    margin: 0 0px;
 }
 
 nav ul li a {
-    color: whitesmoke;
+    color: blue;
     text-decoration: none;
-    padding: 5px 10px;
+    padding: 0px 0px;
     transition: background-color 0.3s;
 }
 
@@ -45,17 +50,17 @@ nav ul li a:hover {
 }
 
 main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
     display: grid;
     grid-template-columns: 3fr 2fr;
-    gap: 20px;
+    gap: 5px;
+    max-width: 1200px;
+    margin: 2px auto;
+    padding: 2px;
 }
 
 .card {
-    background-color: grey;
-    padding: 20px;
+    background-color: #fff;
+    padding: 5px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -67,8 +72,8 @@ main {
 }
 
 aside.card {
-    background-color: cyan;
-    padding: 20px;
+    background-color: #fff;
+    padding: 5px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -99,5 +104,5 @@ footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
 }
