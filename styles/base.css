@@ -1,108 +1,132 @@
-/* Add this line to apply the font to the entire body */
-body {
-    font-family: 'Roboto', Arial, sans-serif;
-}
+        /* Import the Google Font into the CSS */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-/* Your existing CSS rules */
-body {
-    margin: 0;
-    padding: 0;
-    background-color: skyblue;
-}
+        /* Apply the font to the entire body */
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+            background-color: smokewhite;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
 
-header {
-    background-color: #333;
-    color: purple;
-    padding: 10px 0;
-    text-align: center;
-}
+        /* Header styling */
+        header {
+            background-color: navy;
+            color: white;
+            padding: 30px 5px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
 
-header h1 {
-    margin: 0;
-}
+        header h1 {
+            margin: 0;
+        }
 
-header .highlight {
-    color: #ffd700;
-}
+        header .highlight {
+            color: #ffd700;
+        }
 
-nav ul {
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-    background-color: grey;
-    padding: 0.5rem;
-}
+        /* Navigation styling with Flexbox */
+        nav {
+            margin-top: auto; /* Move the nav to the bottom of the header */
+        }
 
-nav ul li {
-    margin: 0 0px;
-}
+        nav ul {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            background-color: grey;
+            padding: 0.5rem;
+            margin: 0;
+        }
 
-nav ul li a {
-    color: blue;
-    text-decoration: none;
-    padding: 0px 0px;
-    transition: background-color 0.3s;
-}
+        nav ul li {
+            margin: 0 0px;
+        }
 
-nav ul li a:hover {
-    background-color: #ffd700;
-    color: #333;
-}
+        nav ul li a {
+            color: red; /* mustard color */
+            text-decoration: none;
+            padding: 5px 0.2px;
+            transition: background-color 0.3s;
+        }
 
-main {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    gap: 5px;
-    max-width: 1200px;
-    margin: 2px auto;
-    padding: 2px;
-}
+        nav ul li a:hover {
+            background-color: green;
+            color: #333;
+        }
 
-.card {
-    background-color: #fff;
-    padding: 5px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
+        /* Main content area using CSS Grid */
+        main {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            flex-grow: 1; /* Allow main to grow and fill the available space */
+            margin: 0; /* Remove any margins */
+        }
 
-.card img {
-    max-width: 20%;
-    border-radius: 5px;
-}
+        .card {
+            background-color: teal;
+            padding: 5px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
 
-aside.card {
-    background-color: #fff;
-    padding: 5px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+        .card img {
+            max-width: 15%;
+            border-radius: 5px;
+        }
 
-aside.card ul {
-    list-style: none;
-    padding: 0;
-}
+        /* Aside content styling */
+        aside.card {
+            background-color: orange;
+            padding: 5px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-aside.card ul li {
-    margin: 10px 0;
-}
+        aside.card ul {
+            list-style: none;
+            padding: 0;
+        }
 
-aside.card ul li a {
-    color: #333;
-    text-decoration: none;
-    padding: 5px 10px;
-    display: block;
-    transition: background-color 0.3s;
-}
+        aside.card ul li {
+            margin: 10px 0;
+        }
 
-aside.card ul li a:hover {
-    background-color: #ffd700;
-    color: #333;
-}
+        aside.card ul li a {
+            color: #333;
+            text-decoration: none;
+            padding: 5px 10px;
+            display: block;
+            transition: background-color 0.3s;
+        }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-}
+        aside.card ul li a:hover {
+            background-color: white;
+            color: #333;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #333;
+            color: blue;
+            text-align: center;
+            padding: 30px;
+        }
+
+        /* Media query for responsiveness */
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+
+            aside.card {
+                order: -1; /* Move aside above main content on small screens */
+            }
+        }
