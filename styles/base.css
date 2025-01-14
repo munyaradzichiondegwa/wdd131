@@ -33,7 +33,8 @@
 
         /* Navigation styling with Flexbox */
         nav {
-            margin-top: auto; /* Move the nav to the bottom of the header */
+            margin-top: auto;
+            /* Move the nav to the bottom of the header */
         }
 
         nav ul {
@@ -50,7 +51,7 @@
         }
 
         nav ul li a {
-            color: red; /* mustard color */
+            color: red;
             text-decoration: none;
             padding: 5px 0.2px;
             transition: background-color 0.3s;
@@ -65,8 +66,10 @@
         main {
             display: grid;
             grid-template-columns: 3fr 1fr;
-            flex-grow: 1; /* Allow main to grow and fill the available space */
-            margin: 0; /* Remove any margins */
+            flex-grow: 1;
+            /* Allow main to grow and fill the available space */
+            margin: 0;
+            /* Remove any margins */
         }
 
         .card {
@@ -128,6 +131,7 @@
             }
 
             aside.card {
-                order: -1; /* Move aside above main content on small screens */
+                order: -1;
+                /* Move aside above main content on small screens */
             }
         }
