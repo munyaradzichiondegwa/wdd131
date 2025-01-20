@@ -1,0 +1,22 @@
+@media screen and (min-width: 768px) {
+    /* Navigation Styles */
+    #hamburger-menu {
+        display: none;
+    }
+
+    nav .navigation {
+        display: flex;
+        justify-content: center;
+        background-color: #34495e;
+    }
+
+    .navigation li {
+        padding: 0.75rem 1.5rem;
+        border-bottom: none;
+    }
+
+    /* Grid Layout */
+    .temple-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
