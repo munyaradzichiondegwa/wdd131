@@ -4,34 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temple Album</title>
-    <meta name="description" content="Pictures of Temple from across the world.">
+    <meta name="description" content="A collection of temples from around the world.">
+    <meta name="keywords" content="temples, lds, mormon, church, jesus christ">
     <meta name="author" content="Munyaradzi Chiondegwa">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/temples.css">
     <link rel="stylesheet" href="styles/temples-large.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="scripts/temples.js" defer></script>
 </head>
 <body>
     <header>
         <h1>Temple Album</h1>
+        <button id="hamburger-menu" aria-label="Toggle Menu">
+            <span>&#9776;</span>
+        </button>
         <nav>
-            <button id="hamburger-menu" aria-label="Toggle Menu">
-                <span>&#9776;</span>
-            </button>
-            <ul class="navigation">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#old">Old</a></li>
-                <li><a href="#new">New</a></li>
-                <li><a href="#large">Large</a></li>
-                <li><a href="#small">Small</a></li>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Old</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Large</a></li>
+                <li><a href="#">Small</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <h2 id="page-title">Temple Gallery</h2>
+        <h2>Our Temple Collection</h2>
         <div class="temple-grid">
             <figure>
                 <img src="images/kona.jpg" alt="Kona Hawaii Temple">
@@ -69,13 +68,12 @@
                 <img src="images/accra.jpg" alt="Accra Ghana Temple">
                 <figcaption>Accra Ghana Temple</figcaption>
             </figure>
- 
         </div>
     </main>
 
     <footer>
-        <p>&copy;💻 Munyaradzi Chiondegwa | Zimbabwe 💻</p>
-        <p>Last Modified: <span id="last-modified"></span></p>
+        <p>&copy; <span id="currentYear"></span> 💻 Munyaradzi Chiondegwa 💻 Zimbabwe </p>
+        <p>Last Updated: <span id="lastModified"></span></p>
     </footer>
 </body>
 </html>

@@ -1,16 +1,16 @@
+// Copyright Year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Last Modified Date
+document.getElementById('lastModified').textContent = document.lastModified;
+
+// Hamburger Menu Toggle
 document.addEventListener('DOMContentLoaded', () => {
-    // Dynamic Copyright Year
-    document.getElementById('current-year').textContent = new Date().getFullYear();
-
-    // Last Modified Date
-    document.getElementById('last-modified').textContent = new Date(document.lastModified).toLocaleDateString();
-
-    // Hamburger Menu Toggle
     const hamburgerMenu = document.getElementById('hamburger-menu');
-    const navigation = document.querySelector('.navigation');
+    const nav = document.querySelector('nav');
 
     hamburgerMenu.addEventListener('click', () => {
-        navigation.classList.toggle('show');
-        hamburgerMenu.innerHTML = navigation.classList.contains('show') ? '&times;' : '&#9776;';
+        nav.classList.toggle('show');
+        hamburgerMenu.innerHTML = nav.classList.contains('show') ? '&times;' : '&#9776;';
     });
 });

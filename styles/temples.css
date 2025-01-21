@@ -1,4 +1,10 @@
-/* Mobile-first reset and base styles */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --background-color: #ecf0f1;
+    --text-color: #333;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,67 +12,65 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
     line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
 }
 
-/* Header Styles */
 header {
-    background-color: #2c3e50;
+    background-color: var(--primary-color);
     color: white;
     padding: 1rem;
     text-align: center;
 }
 
-header h1 {
+h1 {
+    font-family: 'Roboto', sans-serif;
     margin-bottom: 1rem;
 }
 
-/* Navigation Styles */
-nav {
-    position: flex;
-}
-
-.navigation {
-    display: none;
-    list-style: none;
-    background-color: #34495e;
-}
-
-.navigation.show {
-    display: block;
-}
-
-.navigation li {
-    text-align: center;
-    padding: 0.75rem;
-    border-bottom: 1px solid #45637d;
-}
-
-.navigation a {
-    color: white;
-    text-decoration: none;
-    display: block;
-}
-
-.navigation a:hover {
-    background-color: #45637d;
-}
-
 #hamburger-menu {
-    display: block;
     background: none;
     border: none;
     color: white;
-    font-size: 1.5rem;
+    font-size: 2rem;
     cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: block;
 }
 
-/* Main Content Styles */
+nav {
+    display: none;
+}
+
+nav.show {
+    display: block;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: var(--secondary-color);
+    transition: background-color 0.3s ease;
+}
+
 main {
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 1rem;
 }
@@ -77,28 +81,27 @@ main {
     gap: 1rem;
 }
 
-.temple-grid figure {
-    background: white;
+figure {
+    background-color: white;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    text-align: center;
 }
 
-.temple-grid img {
+figure img {
     width: 100%;
-    height: auto;
+    height: 250px;
     object-fit: cover;
 }
 
-.temple-grid figcaption {
+figcaption {
     padding: 0.5rem;
-    text-align: center;
-    background-color: #f1f1f1;
+    font-weight: bold;
 }
 
-/* Footer Styles */
 footer {
-    background-color: #2c3e50;
+    background-color: var(--primary-color);
     color: white;
     text-align: center;
     padding: 1rem;

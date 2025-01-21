@@ -1,21 +1,21 @@
 @media screen and (min-width: 768px) {
-    /* Navigation Styles */
     #hamburger-menu {
         display: none;
     }
 
-    nav .navigation {
-        display: flex;
+    nav {
+        display: block !important;
+    }
+
+    nav ul {
+        flex-direction: row;
         justify-content: center;
-        background-color: #34495e;
     }
 
-    .navigation li {
-        padding: 0.75rem 1.5rem;
-        border-bottom: none;
+    nav a {
+        padding: 0.5rem 1rem;
     }
 
-    /* Grid Layout */
     .temple-grid {
         grid-template-columns: repeat(3, 1fr);
     }
