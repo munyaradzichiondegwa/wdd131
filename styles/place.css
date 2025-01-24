@@ -82,9 +82,8 @@ main {
 
 .data-details {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 0.8fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
-    background: transparent; 
 }
 
 .weather-details {
@@ -122,11 +121,6 @@ main {
     .weather-mobile-icon {
         display: inline-block;
     }
-}
-*::after {
-    content: '';
-    display: block;
-    clear: both;
 }
 
 :root {
@@ -175,3 +169,12 @@ footer {
     position: relative;
     z-index: 1;
 }
+
+.element::after {
+    content: ""; 
+    display: block; 
+    width: 100px; 
+    height: 100px; 
+    background-color: red; 
+  }
+  
