@@ -1,0 +1,17 @@
+/* Responsive image styling */
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block; /* Removes any potential inline spacing */
+}
+
+/* Optional: Add some basic page styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    max-width: 1600px;
+    margin: 0 auto;
+}

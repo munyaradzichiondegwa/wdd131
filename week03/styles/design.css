@@ -61,15 +61,18 @@ ul {
 footer {
     text-align: left;
     padding: 1rem 0;
-    border-top: 1px solid #ddd;
+    color: black;
+    background-color: #f0f0f0;
+    border-top: 1px solid grey;
 }
 
 /* Ensure good color contrast */
 .callout {
-    background-color: #f0f0f0;
-    color: #1a1a1a;
+    /* Improved color contrast */
+    color: #ffffff; /* White text for better readability */
+    background-color: #702963;
+    padding: 1rem; /* Added padding to fix container issues */
 }
-
 /* Responsive design */
 @media (max-width: 768px) {
     main {

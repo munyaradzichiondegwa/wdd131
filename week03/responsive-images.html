@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Temple Image</title>
+    <link rel="stylesheet" href="styles/responsive-images.css">
+</head>
+<body>
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/hero-large.webp" media="(min-width: 1500px)">
+                <source srcset="images/hero-medium.webp" media="(min-width: 1000px)">
+                <img src="images/hero-small.webp"
+                     alt="Harare Temple Exterior View" 
+                     width="500" 
+                     height="396">
+            </picture>
+        </div>
+    </main>
+</body>
+</html>
