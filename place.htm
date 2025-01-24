@@ -5,14 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zimbabwe</title>
-    <meta name="description"
-        content="Explore the beautiful country of Zimbabwe with its diverse wildlife, stunning landscapes, and rich culture.">
+    <meta name="description" content="Explore the beautiful country of Zimbabwe with its diverse wildlife, stunning landscapes, and rich culture.">
     <meta name="keywords" content="Zimbabwe, Africa, wildlife, culture, travel">
     <meta name="author" content="Munyaradzi Chiondegwa">
     <link rel="stylesheet" href="styles/place.css">
     <script src="scripts/place.js" defer></script>
 </head>
-
 <body>
     <header>
         <h1>Zimbabwe</h1>
@@ -20,8 +18,14 @@
 
     <main>
         <div class="hero">
-            <img src="images/zimbabwe-large.webp" alt="Landscape of Zimbabwe with Victoria Falls" width="1920"
-                height="1080">
+            <picture>
+                <source srcset="images/zimbabwe-small.webp" media="(max-width: 500px)">
+                <source srcset="images/zimbabwe-medium.webp" media="(max-width: 1000px)">
+                <img src="images/zimbabwe-large.webp" 
+                     alt="Scenic landscape of Zimbabwe featuring Victoria Falls" 
+                     width="1920" 
+                     height="1080">
+            </picture>
             <div class="hero-overlay">
                 <section id="data">
                     <h2 class="bg-primary text-secondary px-2 py-1 rounded-md">Data</h2>
@@ -36,22 +40,20 @@
                     </div>
                 </section>
                 <section id="weather">
-                    <h2>Weather <span class="weather-icon">⛅</span></h2>
+                    <h2 class="bg-primary text-secondary px-2 py-1 rounded-md">Weather ⛅</h2>
                     <div class="weather-details">
                         <p>Temperature: 28°C</p>
                         <p>Conditions: Partly Cloudy</p>
                         <p>Wind: 5 km/h</p>
-                        <p>Wind Chill: <span id="windChill">9.8°C</span></p>
+                        <p>Wind Chill: <span id="windChill">N/A</span></p>
                     </div>
                 </section>
             </div>
         </div>
 
         <footer>
-            <p>&copy; <span id="currentYear"></span> 💻 Munyaradzi Chiondegwa 💻 Zimbabwe | Last Modified: <span
-                    id="lastModified"></span></p>
+            <p>&copy; <span id="currentYear"></span>💻 Munyaradzi Chiondegwa 💻 | Zimbabwe | Last Modified: <span id="lastModified"></span></p>
         </footer>
     </main>
 </body>
-
 </html>

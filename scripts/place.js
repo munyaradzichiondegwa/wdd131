@@ -1,22 +1,25 @@
-// Function to calculate wind chill
-function calculateWindChill(temperature, windSpeed) {
-    return windSpeed > 3 && temperature <= 50 
-        ? (13.12 + (0.6215 * temperature) - (11.37 * Math.pow(windSpeed, 0.16)) + (0.3965 * temperature * Math.pow(windSpeed, 0.16))).toFixed(1)
-        : "N/A";
-}
-
-// Set current year and last modified date
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
+    // Current Year
     const currentYear = new Date().getFullYear();
-    const lastModified = document.lastModified;
-
     document.getElementById('currentYear').textContent = currentYear;
+
+    // Last Modified
+    const lastModified = document.lastModified;
     document.getElementById('lastModified').textContent = lastModified;
 
-    // Wind chill calculation with static values
-    const temperature = 28;  // °C
-    const windSpeed = 6;     // km/h
-    const windChillElement = document.getElementById('windChill');
-    
-    windChillElement.textContent = calculateWindChill(temperature, windSpeed);
+    // Wind Chill Calculation
+    const temperature = 28; // °C
+    const windSpeed = 5; // km/h
+
+    const windChillSpan = document.getElementById('windChill');
+    windChillSpan.textContent = calculateWindChill(temperature, windSpeed);
 });
+
+function calculateWindChill(temp, windSpeed) {
+    // Wind Chill Formula for Metric (Celsius)
+    if (temp <= 10 && windSpeed > 4.8) {
+        return (13.12 + (0.6215 * temp) - (11.37 * Math.pow(windSpeed, 0.16)) + (0.3965 * temp * Math.pow(windSpeed, 0.16))).toFixed(1) + "°C";
+    } else {
+        return "N/A";
+    }
+}
