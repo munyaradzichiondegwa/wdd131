@@ -1,14 +1,15 @@
 body {
-  font-family: Arial, sans-serif; 
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  grid-template-columns: 2fr 1fr;
-  min-height: 100vh;
-  background-color: aquamarine;
-  margin: 0;
-  padding: 0;
-  gap: 1rem;
+    font-family: Arial, sans-serif;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 2fr 1fr;
+    min-height: 100vh;
+    background-color: aquamarine;
+    margin: 0;
+    padding: 0;
+    gap: 1rem;
 }
+
 /* Header Styles */
 header {
     grid-area: header;
@@ -17,6 +18,7 @@ header {
     font-size: 20px;
     padding: 2rem;
 }
+
 /* Navigation Styles */
 nav {
     display: flex;
@@ -24,29 +26,35 @@ nav {
     background-color: limegreen;
     padding: 1rem;
 }
+
 nav a {
     color: blue;
     text-decoration: none;
 }
+
 /* Main Content Styles */
 main {
     grid-area: main;
     background-color: #ccc;
     padding: 1rem;
 }
+
 aside {
     grid-area: aside;
     background-color: #eee;
     padding: 1rem;
 }
+
 /* Footer Styles */
 footer {
     grid-area: footer;
-    background-color: #DDA0DD; /* Light purple for footer */
+    background-color: #DDA0DD;
+    /* Light purple for footer */
     color: blue;
     text-align: center;
     padding: 50px;
 }
+
 /* Responsive design */
 @media (max-width: 768px) {
     main {
