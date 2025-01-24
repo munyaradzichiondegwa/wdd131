@@ -1,0 +1,97 @@
+:root {
+    --primary-color: #008C45;   /* Green from Zimbabwe flag */
+    --secondary-color: #FFFFFF; /* White from Zimbabwe flag */
+    --accent-color: #000000;    /* Black from Zimbabwe flag */
+    --red-color: #CF081F;       /* Red from Zimbabwe flag */
+    --yellow-color: #FFC600;    /* Yellow star from Zimbabwe flag */
+    --text-color: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--red-color);
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+section {
+    margin-bottom: 2rem;
+    background-color: rgba(0, 140, 69, 0.05);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+#weather .weather-icon {
+    display: none;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    nav ul {
+        gap: 2rem;
+    }
+
+    #weather .weather-icon {
+        display: inline-block;
+    }
+
+    #weather .weather-icon::after {
+        content: "⛅";
+    }
+
+    section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    section h2 {
+        grid-column: 1 / -1;
+    }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zimbabwe: A Land of Natural Wonders</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Zimbabwe</h1>
+        <nav>
+            <ul>
+                <li><a href="#history">History</a></li>
+                <li><a href="#wildlife">Wildlife</a></li>
+                <li><a href="#geography">Geography</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/zimbabwe-large.webp" media="(min-width: 1000px)">
+                <source srcset="images/zimbabwe-medium.webp" media="(min-width: 500px)">
+                <img src="images/zimbabwe-small.webp.webp" 
+                     alt="Landscape of Zimbabwe with Victoria Falls" 
+                     width="1000" 
+                     height="500">
+            </picture>
+        </div>
+
+        <section id="weather">
+            <h2>Weather <span class="weather-icon">⛅</span></h2>
+            <div class="weather-details">
+                <p>Temperature: 28°C</p>
+                <p>Wind Speed: 6 km/h</p>
+                <p>Wind Chill: <span id="windChill">N/A</span></p>
+            </div>
+        </section>
+
+        <section id="history">
+            <h2>History</h2>
+            <p>Zimbabwe, formerly Rhodesia, gained independence in 1980 after a long struggle. The name Zimbabwe, meaning "great house of stone," references the ancient Great Zimbabwe archaeological site, a testament to the region's rich historical heritage.</p>
+        </section>
+
+        <section id="wildlife">
+            <h2>Unique Wildlife</h2>
+            <p>Zimbabwe boasts incredible biodiversity, with national parks like Hwange hosting large elephant populations, diverse bird species, and iconic African wildlife. The country is home to part of the magnificent Victoria Falls, one of the world's largest waterfalls.</p>
+        </section>
+
+        <section id="geography">
+            <h2>Geography</h2>
+            <p>Located in southern Africa, Zimbabwe features diverse landscapes including the highveld plateau, mountainous eastern highlands, and savanna plains. The country is landlocked, bordered by South Africa, Botswana, Zambia, and Mozambique.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Zimbabwe Explorer | Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
