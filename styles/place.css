@@ -1,9 +1,7 @@
-/* place.css */
-
 :root {
-    --primary-color: #1F4F20; /* Green from Zimbabwe flag */
-    --secondary-color: #FFFF00; /* Yellow from Zimbabwe flag */
-    --accent-color: #DE0000; /* Red from Zimbabwe flag */
+    --primary-color: #1F4F20; 
+    --secondary-color: #FFFF00; 
+    --accent-color: #DE0000; 
     --text-color: #333;
     --bg-color: #F0F0F0;
 }
