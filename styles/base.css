@@ -4,10 +4,10 @@
         /* Apply the font to the entire body */
         body {
             font-family: 'Roboto', Arial, sans-serif;
-            color: white;
+            color: black;
             margin: 0;
             padding: 0;
-            background-color: silver;
+            background-color: white;
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -15,7 +15,7 @@
 
         /* Header styling */
         header {
-            background-color: navy;
+            background-color: navy ;
             color: white;
             padding: 30px 5px;
             text-align: center;
@@ -41,7 +41,7 @@
             display: flex;
             justify-content: space-around;
             list-style: none;
-            background-color: grey;
+            background-color: black;
             padding: 0.5rem;
             margin: 0;
         }
@@ -51,15 +51,15 @@
         }
 
         nav ul li a {
-            color: red;
+            color: white;
             text-decoration: none;
             padding: 5px 0.2px;
             transition: background-color 0.3s;
         }
 
         nav ul li a:hover {
-            background-color: green;
-            color: #333;
+            background-color: yellowgreen;
+            color: black;
         }
 
         /* Main content area using CSS Grid */
@@ -73,7 +73,7 @@
         }
 
         .card {
-            background-color: teal;
+            background-color: white;
             padding: 5px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -88,7 +88,7 @@
 
         /* Aside content styling */
         aside.card {
-            background-color: orange;
+            background-color: whitesmoke;
             padding: 5px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -118,8 +118,8 @@
 
         /* Footer styling */
         footer {
-            background-color: #333;
-            color: blue;
+            background-color: navy;
+            color: white;
             text-align: center;
             padding: 30px;
         }
