@@ -12,7 +12,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles/place.css">
     <script src="scripts/place.js" defer></script>
 </head>
@@ -67,21 +66,22 @@
                         </svg>
                     </h2>
                     <div class="weather-details">
-                        <p>Temperature: 28°C</p>
+                        <p>Temperature: <span id="temperature">28</span>°C</p>
                         <p>Conditions: Partly Cloudy</p>
-                        <p>Wind: 5 km/h</p>
+                        <p>Wind: <span id="windSpeed">5</span> km/h</p>
                         <p>Wind Chill: <span id="windChill">N/A</span></p>
                     </div>
                 </section>
-
             </div>
         </div>
-
-        <footer>
-            <p>&copy; <span id="currentYear"></span>💻 Munyaradzi Chiondegwa 💻 | Zimbabwe | Last Modified: <span
-                    id="lastModified"></span></p>
-        </footer>
     </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Munyaradzi Chiondegwa | Zimbabwe | Last Modified: <span
+                id="lastModified"></span></p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
