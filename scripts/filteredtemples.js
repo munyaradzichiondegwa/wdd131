@@ -73,28 +73,28 @@ const temples = [
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
     },
     {
-      templeName: "Tokyo Japan",
-      location: "Tokyo, Japan",
-      dedicated: "1980, October, 27",
-      area: 68000,
+      templeName: "Durban South Africa Temple",
+      location: "Durban, South Africa",
+      dedicated: "2020, February, 16",
+      area: 19860,
       imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/tokyo-japan/400x250/tokyo-japan-temple-exterior.jpg"
+      "https://churchofjesuschristtemples.org/assets/img/temples/durban-south-africa-temple/durban-south-africa-temple-7929-thumb.jpg"
     },
     {
-      templeName: "Johannesburg South Africa",
-      location: "Johannesburg, South Africa",
-      dedicated: "1985, August, 24",
-      area: 9000,
+      templeName: "Nauvoo Illinois Temple",
+      location: "Nauvoo, Illinois, United States",
+      dedicated: "2002, June, 27 - 30",
+      area: 54000,
       imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/johannesburg-south-africa/400x250/johannesburg-south-africa-temple-exterior.jpg"
+      "https://churchofjesuschristtemples.org/assets/img/temples/nauvoo-illinois-temple/nauvoo-illinois-temple-42924-thumb.jpg"
     },
     {
-      templeName: "Paris France",
-      location: "Paris, France",
-      dedicated: "2017, May, 21",
-      area: 44000,
+      templeName: "Accra Ghana Temple",
+      location: "Accra, Ghana",
+      dedicated: "2004, January, 11",
+      area: 17500,
       imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/paris-france/400x250/paris-france-temple-exterior.jpg"
+      "https://churchofjesuschristtemples.org/assets/img/temples/accra-ghana-temple/accra-ghana-temple-5154-thumb.jpg"
     }
   ];
 
