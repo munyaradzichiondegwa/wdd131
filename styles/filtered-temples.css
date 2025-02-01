@@ -56,12 +56,18 @@ nav ul {
     list-style: none;
 }
 
+nav ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+
 nav a {
     display: block;
     color: white;
     text-decoration: none;
     padding: 0.75rem;
-    text-align: space-between;
+    text-align: space-around;
 }
 
 nav a:hover {
