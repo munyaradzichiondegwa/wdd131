@@ -67,7 +67,7 @@ nav a {
     color: white;
     text-decoration: none;
     padding: 0.75rem;
-    text-align: space-around;
+    text-align: justify;
 }
 
 nav a:hover {
