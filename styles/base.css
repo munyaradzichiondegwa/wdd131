@@ -1,6 +1,26 @@
-        /* Import the Google Font into the CSS */
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+         
+         body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        
+        header {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        
+        footer {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        
         /* Apply the font to the entire body */
         body {
             font-family: 'Roboto', Arial, sans-serif;
