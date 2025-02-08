@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Submitted</title>
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+    <header>
+        <h1>Thank You for Your Review!</h1>
+    </header>
+
+    <main>
+        <div id="confirmationDetails">
+            <p>Your review has been successfully submitted.</p>
+            <p>Total Reviews Submitted: <span id="reviewCount">0</span></p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Product Reviews. All rights reserved.</p>
+    </footer>
+
+    <script>
+        window.addEventListener('load', function() {
+            const params = new URLSearchParams(window.location.search);
+            if (params.size > 0) {
+                let count = localStorage.getItem('reviewCount') || 0;
+                count = parseInt(count) + 1;
+                localStorage.setItem('reviewCount', count);
+                document.getElementById('reviewCount').textContent = count;
+            }
+        });
+    </script>
+</body>
+</html>

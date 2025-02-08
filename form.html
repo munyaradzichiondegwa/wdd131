@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header>
+        <p>Product Review</p>
+    </header>
+    <div class="container">
+        <form action="review.html" method="get">
+            <div class="form-group">
+                <label for="product">Product Name:</label>
+                <select id="product" name="product" required>
+                    <option value="" disabled selected>Select a Product...</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Overall Rating:</label>
+                <div class="rating">
+                    <input type="radio" id="rating1" name="rating" value="1" required>
+                    <label for="rating1">☆</label>
+                    <input type="radio" id="rating2" name="rating" value="2">
+                    <label for="rating2">☆☆</label>
+                    <input type="radio" id="rating3" name="rating" value="3">
+                    <label for="rating3">☆☆☆</label>
+                    <input type="radio" id="rating4" name="rating" value="4">
+                    <label for="rating4">☆☆☆☆</label>
+                    <input type="radio" id="rating5" name="rating" value="5">
+                    <label for="rating5">☆☆☆☆☆</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="installationDate">Date of Installation:</label>
+                <input type="date" id="installationDate" name="installationDate" required>
+            </div>
+
+            <div class="form-group">
+                <label>Useful Features: <span>(Check all that apply)</span></label>
+                <div class="checkboxes">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="durability" name="features" value="Durability">
+                        <label for="durability">Durability</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="easeOfUse" name="features" value="Ease of Use">
+                        <label for="easeOfUse">Ease of Use</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="performance" name="features" value="Performance">
+                        <label for="performance">Performance</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="design" name="features" value="Design">
+                        <label for="design">Design</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="review">Written Review: <span>(Optional)</span></label>
+                <textarea id="review" name="review" rows="4" placeholder="Share your thoughts..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="userName">Your Name: <span>(Optional)</span></label>
+                <input type="text" id="userName" name="userName" placeholder="Your Name">
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Post Review" aria-label="Post Review">
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy;2025 💻 Munyaradzi Chiondegwa |💻</p>
+        <p>Zimbabwe</p>
+        <p>Last Modification: <span id="footer-time"></span></p>
+    </footer>
+</body>
+</html>
