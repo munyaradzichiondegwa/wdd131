@@ -1,0 +1,84 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5e6d3;
+    color: #2d5a27;
+}
+
+header {
+    background-color: #2d5a27;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 2rem;
+}
+
+footer {
+    background-color: #2d5a27;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+}
+
+/* Contact Page Styles */
+#contact-form {
+    margin-bottom: 2rem;
+}
+
+#contact-form label {
+    display: block;
+    margin-top: 1rem;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+#contact-form button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #e57f45;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#map {
+    margin-top: 2rem;
+}
+
+#weather {
+    margin-top: 2rem;
+}

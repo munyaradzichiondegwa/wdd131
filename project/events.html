@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - The Garden Community Hub</title>
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="script/project.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>The Garden Community Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gardens.html">Gardens</a></li>
+                <li><a href="events.html">Events</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Upcoming Events</h2>
+        <section id="event-calendar">
+            <div id="event-list"></div>
+        </section>
+
+        <section id="event-form">
+            <h3>Add Your Event</h3>
+            <form id="add-event-form">
+                <label for="event-name">Event Name:</label>
+                <input type="text" id="event-name" required>
+                <label for="event-date">Event Date:</label>
+                <input type="date" id="event-date" required>
+                <button type="submit">Add Event</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 | The Garden Community Hub | Munyaradzi Chiondegwa | 🥬. <a href="references.txt">References</a></p>
+    </footer>
+</body>
+</html>

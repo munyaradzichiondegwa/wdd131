@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - The Garden Community Hub</title>
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="script/project.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>The Garden Community Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gardens.html">Gardens</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Contact Us</h2>
+        <section id="contact-section">
+            <h3>Get in Touch</h3>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <section id="map">
+            <h3>Find Our Gardens</h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509357!2d144.95373521531575!3d-37.81627947975167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f6e5d67%3A0xb9f26c93a360f29d!2sQueen%20Victoria%20Market!5e0!3m2!1sen!2sau!4v1608051605466!5m2!1sen!2sau"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+
+        <section id="weather">
+            <h3>Local Weather</h3>
+            <div id="weather-info">
+                <p>Fetching weather data...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 | The Garden Community Hub | Munyaradzi Chiondegwa | 🥬. <a href="references.txt">References</a>
+        </p>
+    </footer>
+</body>
+
+</html>
