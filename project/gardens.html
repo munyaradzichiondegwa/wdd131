@@ -21,14 +21,29 @@
         </nav>
     </header>
     <main>
-        <section>
-            <h2>Our Gardens</h2>
-            <p>Profiles of local gardens will go here.</p>
+        <section id="gardensSection">
+            <h2>Our Vegetable Gardens</h2>  
+            <div id="gardenList">
+                <!-- Garden profiles will be loaded here -->
+            </div>
+
+            <form id="newGardenForm">
+                <h3>Suggest a Vegetable Garden</h3> 
+                <label for="gardenName">Garden Name:</label><br>
+                <input type="text" id="gardenName" name="gardenName" required><br>
+
+                <label for="gardenDescription">Description (mention key vegetables grown):</label><br>
+                <textarea id="gardenDescription" name="gardenDescription" required></textarea><br><br>
+
+                <label for="vegetablesGrown">Main Vegetables Grown:</label><br>
+                <input type="text" id="vegetablesGrown" name="vegetablesGrown" placeholder="e.g., Tomatoes, Lettuce, Peppers" required><br><br>
+                <input type="submit" value="Submit" aria-label="Submit Garden Suggestion">
+            </form>
+            <div id="message"></div>
         </section>
     </main>
-   
     <footer>
-        <p>&copy; 2025 | The Garden Community Hub | Munyaradzi Chiondegwa | 🥬</p>
+        <p>&copy; 2025 Community Gardening Initiatives | Munyaradzi Chiondegwa | 🥬 | <a href="references.html">References</a></p>
     </footer>
 </body>
 </html>

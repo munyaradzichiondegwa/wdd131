@@ -1,10 +1,13 @@
+/* Reset (using a CDN for Normalize.css) */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+
 /* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #f5e6d3;
-    color: #2d5a27;
+    background-color: #f5e6d3; /* Light beige */
+    color: #2d5a27; /* Dark green */
+    line-height: 1.6; /* Improves readability */
 }
 
 header {
@@ -17,16 +20,42 @@ header {
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0; /* Remove default margin */
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 1rem;
+/* Mobile-first navigation */
+nav ul {
+    display: none; /* Hide navigation on smaller screens initially */
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
+/* Hamburger menu styles (you'll need to implement the JavaScript functionality) */
+.hamburger {
+    display: block; /* Show hamburger on smaller screens */
+    /* ... Add styles for your hamburger icon/button */
+}
+
+@media (min-width: 768px) {
+    nav ul {
+        display: block; /* Show navigation on larger screens */
+    }
+    .hamburger {
+        display: none; /* Hide hamburger on larger screens */
+    }
+    nav ul li {
+        display: inline;
+        margin: 0 1rem;
+    }
+}
+
+
+a { /* Link styles */
+    color: #2d5a27; /* Dark green */
+    text-decoration: underline;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+a:hover {
+    color: #e57f45; /* Orange on hover */
 }
 
 main {
@@ -41,44 +70,80 @@ footer {
     margin-top: 2rem;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav ul li {
-        display: block;
-        margin: 0.5rem 0;
-    }
+
+h2 {  /* Heading styles */
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
 }
 
-/* Contact Page Styles */
-#contact-form {
-    margin-bottom: 2rem;
+h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
 }
 
-#contact-form label {
+/* Form Styles */
+.form-label { /* Use a class for reusability */
     display: block;
     margin-top: 1rem;
 }
 
-#contact-form input,
-#contact-form textarea {
+.form-input,  /* Use a class */
+textarea {
     width: 100%;
     padding: 0.5rem;
     margin-top: 0.5rem;
+    border: 1px solid #ccc; /* Add a border */
 }
 
-#contact-form button {
+.form-input:focus, /* Focus styles */
+textarea:focus {
+    outline: 2px solid #e57f45; /* Orange outline on focus */
+}
+
+/* ... (Add styles for form error states if needed) */
+
+
+button { /* General button styles */
     margin-top: 1rem;
     padding: 0.5rem 1rem;
     background-color: #e57f45;
     color: white;
     border: none;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-#map {
+button:hover {
+    background-color: #c46f3c; /* Darker orange on hover */
+}
+
+
+#map { /* Map container styles */
+    margin-top: 2rem;
+    height: 400px; /* Set a height for the map */
+    width: 100%;
+}
+
+#weather { /* Weather container styles */
     margin-top: 2rem;
 }
 
-#weather {
-    margin-top: 2rem;
+/* Styles for the garden list */  /* New styles added here */
+#gardenList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.garden-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.success {
+    color: green;
+}
+
+.error {
+    color: red;
 }
