@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gardens</title>
+    <meta name="description" content="Explore local community gardens, their locations, and how you can get involved.">
+    <meta name="keywords" content="community gardens, urban farming, sustainability, local gardening">
+    <meta name="author" content="Munyaradzi Chiondegwa">
+    <title>Community Gardens | The Garden Community Hub</title>
     <link rel="stylesheet" href="styles/project.css">
-    <script src="scripts/project.js" defer></script>
+    <script defer src="scripts/project.js"></script>
 </head>
 <body>
+
     <header>
         <h1>Community Gardens</h1>
         <nav>
@@ -16,34 +20,35 @@
                 <li><a href="gardens.html">Gardens</a></li>
                 <li><a href="events.html">Events</a></li>
                 <li><a href="resources.html">Resources</a></li>
-                <li><a href="getinvolved.html">Get Involved</a></li>
+                <li><a href="get-involved.html">Get Involved</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
-        <section id="gardensSection">
-            <h2>Our Vegetable Gardens</h2>  
-            <div id="gardenList">
-                <!-- Garden profiles will be loaded here -->
-            </div>
+        <section>
+            <h2>Discover Local Gardens</h2>
+            <p>Our community gardens offer opportunities to grow fresh produce, connect with neighbors, and learn about sustainable gardening practices. Below are some of the key gardens in our network:</p>
+        </section>
 
-            <form id="newGardenForm">
-                <h3>Suggest a Vegetable Garden</h3> 
-                <label for="gardenName">Garden Name:</label><br>
-                <input type="text" id="gardenName" name="gardenName" required><br>
-
-                <label for="gardenDescription">Description (mention key vegetables grown):</label><br>
-                <textarea id="gardenDescription" name="gardenDescription" required></textarea><br><br>
-
-                <label for="vegetablesGrown">Main Vegetables Grown:</label><br>
-                <input type="text" id="vegetablesGrown" name="vegetablesGrown" placeholder="e.g., Tomatoes, Lettuce, Peppers" required><br><br>
-                <input type="submit" value="Submit" aria-label="Submit Garden Suggestion">
-            </form>
-            <div id="message"></div>
+        <section id="gardens-container">
+            <!-- Dynamic content will be loaded here by JavaScript -->
         </section>
     </main>
+
+    <aside>
+        <h3>Why Join a Community Garden?</h3>
+        <ul>
+            <li>Grow your own food</li>
+            <li>Learn sustainable gardening techniques</li>
+            <li>Meet like-minded people</li>
+            <li>Contribute to a greener environment</li>
+        </ul>
+    </aside>
+
     <footer>
-        <p>&copy; 2025 Community Gardening Initiatives | Munyaradzi Chiondegwa | 🥬 | <a href="references.html">References</a></p>
+        <p>&copy; 2025 The Garden Community Hub | Munyaradzi Chiondegwa</p>
     </footer>
+
 </body>
 </html>

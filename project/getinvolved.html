@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get involved with community gardening initiatives. Volunteer, donate, or start your own garden.">
+    <meta name="keywords" content="community gardening, volunteer, donation, urban farming, sustainability">
+    <meta name="author" content="Munyaradzi Chiondegwa">
+    <title>Get Involved | The Garden Community Hub</title>
+    <link rel="stylesheet" href="styles/project.css">
+    <script defer src="scripts/project.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Get Involved</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gardens.html">Gardens</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="get-involved.html">Get Involved</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Ways to Get Involved</h2>
+            <p>Be part of the movement! There are many ways you can help support and grow our community gardening initiatives.</p>
+        </section>
+
+        <section id="involvement-options">
+            <div class="involvement-card">
+                <h3>Volunteer</h3>
+                <p>Join our team of volunteers to help maintain community gardens, host workshops, and support sustainability efforts.</p>
+                <button onclick="showForm('volunteer')">Sign Up</button>
+            </div>
+
+            <div class="involvement-card">
+                <h3>Donate</h3>
+                <p>Your contributions help fund seeds, tools, and community programs. Every donation makes a difference.</p>
+                <button onclick="showForm('donate')">Donate Now</button>
+            </div>
+
+            <div class="involvement-card">
+                <h3>Start a Garden</h3>
+                <p>Want to create a community garden in your area? We provide guidance and support to help you get started.</p>
+                <button onclick="showForm('start')">Learn More</button>
+            </div>
+        </section>
+
+        <section id="form-section" style="display: none;">
+            <h2 id="form-title"></h2>
+            <form id="involvement-form">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+
+                <label for="message">Why do you want to get involved?</label>
+                <textarea id="message" required></textarea>
+
+                <button type="submit">Submit</button>
+                <button type="button" onclick="hideForm()">Cancel</button>
+            </form>
+        </section>
+    </main>
+
+    <aside>
+        <h3>Why Get Involved?</h3>
+        <ul>
+            <li>Support local food sustainability</li>
+            <li>Connect with your community</li>
+            <li>Promote a greener environment</li>
+            <li>Make a positive impact</li>
+        </ul>
+    </aside>
+
+    <footer>
+        <p>&copy; 2025 The Garden Community Hub | Munyaradzi Chiondegwa</p>
+    </footer>
+
+</body>
+</html>
