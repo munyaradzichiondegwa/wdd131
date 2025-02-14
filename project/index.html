@@ -36,16 +36,20 @@
                 <p>Join us in creating green spaces and promoting sustainable living in our community!</p>
                 <a href="get-involved.html" class="cta-button">Get Involved</a>
             </div>
-        </section> <!-- ✅ Fixed Closing Tag -->
+        </section>
 
         <section id="intro">
             <h2>What is Community Gardening?</h2>
-            <p>Community gardening involves people coming together to grow food and create green spaces. These gardens promote sustainability, social interaction, and provide fresh produce for local communities.</p>
+            <p>Community gardening is the collaborative cultivation of a shared plot of land by a group of people. 
+                This shared space, whether a small urban lot or a larger area in a suburban or rural setting, 
+                is used to grow fruits, vegetables, herbs, or other plants. The key element is the shared responsibility 
+                and the collective benefits derived from working together. Community gardens offer a range of advantages, 
+                from providing access to fresh, affordable produce to fostering social connections and promoting environmental 
+                stewardship. They serve as valuable resources, enriching both individual lives and the wider community</p>
         </section>
-        
-        <section id="impact">
-            <h2>The Positive Impact of Gardening</h2>
-            <ul>
+        <section id="impact" class="bg-green-50 p-6 rounded-lg">
+            <h2 class="text-2xl font-bold text-green-800 mb-4">The Positive Impact of Gardening</h2>
+            <ul class="space-y-3 text-gray-700">
                 <li>Encourages local sustainability</li>
                 <li>Improves community cohesion</li>
                 <li>Provides access to healthy, fresh produce</li>
@@ -53,18 +57,46 @@
             </ul>
         </section>
         
-        <section id="featured-gardens">
-            <h2>Featured Gardens</h2>
-            <p>Explore the local gardens that make a difference!</p>
-            <ul id="gardens-list">
-                <!-- Dynamic content will be loaded here -->
-            </ul>
+    <section id="featured-gardens">
+        <section class="bg-green-100 p-6 rounded-lg">
+            <h2 class="text-2xl font-bold text-green-800 mb-4">Featured Gardens</h2>
+            <p class="text-gray-700 mb-6">Explore the local gardens that make a difference in our community, transforming urban spaces into vibrant, sustainable ecosystems.</p>
+            
+            <div class="grid md:grid-cols-3 gap-4">
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <h3 class="font-semibold text-green-700 mb-2">Community Vegetable Garden</h3>
+                    <p class="text-sm text-gray-600">A collaborative space where neighbors grow fresh, organic produce together, promoting food security and community connection.</p>
+                </div>
+                
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <h3 class="font-semibold text-green-700 mb-2">Urban Pollinator Sanctuary</h3>
+                    <p class="text-sm text-gray-600">A carefully curated garden designed to support local bee populations and enhance urban biodiversity through native plant species.</p>
+                </div>
+                
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <h3 class="font-semibold text-green-700 mb-2">School Education Garden</h3>
+                    <p class="text-sm text-gray-600">An interactive learning space where students discover sustainable agriculture, ecological principles, and the joy of growing their own food.</p>
+                </div>
+            </div>
         </section>
+        
+        <ul id="gardens-list" class="grid md:grid-cols-3 gap-4 p-6">
+            <!-- Dynamic content will be loaded here -->
+        </ul>
+    </section>
     </main>
-    
-    <aside>
-        <h3>Latest News</h3>
-        <p>Check out our upcoming gardening workshops and community events!</p>
+
+    <aside class="bg-green-50 p-4 rounded-lg shadow-md">
+        <h3 class="text-xl font-bold text-green-800 mb-3">Latest News</h3>
+        <p class="text-gray-700 mb-4">Check out our upcoming gardening workshops and community events!</p>
+        <div class="flex space-x-2">
+            <a href="events.html" target="_blank" class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition-colors">
+                Learn More
+            </a>
+            <a href="events.html" target="_blank" class="bg-green-200 text-green-800 px-4 py-2 rounded-md hover:bg-green-300 transition-colors">
+                Register Now
+            </a>
+        </div>
     </aside>
     
     <footer>

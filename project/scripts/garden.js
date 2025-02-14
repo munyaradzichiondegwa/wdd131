@@ -1,6 +1,7 @@
+
 document.addEventListener("DOMContentLoaded", function () {
     // Gardens list
-    const gardens = [
+    const initialGardens = [
         { name: "Garden A", link: "gardens.html", image: "images/garden-a.jpg" },
         { name: "Garden B", link: "gardens.html", image: "images/garden-b.jpg" },
         { name: "Garden C", link: "gardens.html", image: "images/garden-c.jpg" }
@@ -9,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const gardensList = document.getElementById("gardens-list");
 
     if (gardensList) {
-        gardens.forEach(garden => {
+        initialGardens.forEach(garden => {
             const listItem = document.createElement("li");
             const gardenLink = document.createElement("a");
             const gardenImage = document.createElement("img");
@@ -26,6 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    // Render gardens when the page loads
+    // document.addEventListener('DOMContentLoaded', renderGardens);
     // Hamburger menu toggle
     const menuToggle = document.getElementById("menu-toggle");
     const navMenu = document.getElementById("nav-menu");
