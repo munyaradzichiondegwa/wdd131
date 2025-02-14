@@ -33,6 +33,59 @@ nav ul li a {
     font-weight: bold;
 }
 
+/* Default styles for larger screens */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #2d5a27;
+    font-weight: bold;
+}
+
+/* Styles for smaller screens */
+#menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #2d5a27;
+}
+
+@media screen and (max-width: 768px) {
+    #menu-toggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background: #f5e6d3;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        padding: 10px 0;
+        text-align: center;
+    }
+}
+
 /* Main Content */
 main {
     padding: 20px;

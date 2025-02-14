@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // Gardens list
     const gardens = [
         { name: "Garden A", link: "gardens.html", image: "images/garden-a.jpg" },
         { name: "Garden B", link: "gardens.html", image: "images/garden-b.jpg" },
@@ -7,40 +8,61 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const gardensList = document.getElementById("gardens-list");
 
-    gardens.forEach(garden => {
-        const listItem = document.createElement("li");
-        const gardenLink = document.createElement("a");
-        const gardenImage = document.createElement("img");
+    if (gardensList) {
+        gardens.forEach(garden => {
+            const listItem = document.createElement("li");
+            const gardenLink = document.createElement("a");
+            const gardenImage = document.createElement("img");
 
-        gardenLink.href = garden.link;
-        gardenLink.textContent = garden.name;
-        gardenImage.src = garden.image;
-        gardenImage.alt = garden.name;
-        gardenImage.loading = "lazy"; // Lazy loading the images
+            gardenLink.href = garden.link;
+            gardenLink.textContent = garden.name;
+            gardenImage.src = garden.image;
+            gardenImage.alt = garden.name;
+            gardenImage.loading = "lazy"; // Lazy loading the images
 
-        listItem.appendChild(gardenImage);
-        listItem.appendChild(gardenLink);
-        gardensList.appendChild(listItem);
-    });
-});
+            listItem.appendChild(gardenImage);
+            listItem.appendChild(gardenLink);
+            gardensList.appendChild(listItem);
+        });
+    }
 
-document.addEventListener("DOMContentLoaded", function () {
-    const gardens = [
+    // Hamburger menu toggle
+    const menuToggle = document.getElementById("menu-toggle");
+    const navMenu = document.getElementById("nav-menu");
+
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener("click", function () {
+            navMenu.classList.toggle("active");
+        });
+    }
+
+    // Last modified date
+    const lastModified = document.lastModified;
+    const footer = document.querySelector("footer");
+
+    if (footer) {
+        const modifiedPara = document.createElement("p");
+        modifiedPara.textContent = `Last Modified: ${lastModified}`;
+        footer.appendChild(modifiedPara);
+    }
+
+    // Gardens container
+    const detailedGardens = [
         {
             name: "Green Haven Garden",
-            location: "123 Green St, Cityville",
+            location: "30 Braemar St, Mt. Pleasant, Harare",
             description: "A thriving organic vegetable garden maintained by the local community.",
             image: "images/garden-a.jpg"
         },
         {
             name: "Pollinator Paradise",
-            location: "45 Nature Rd, EcoTown",
+            location: "18 Margaret Windsor Rd, Marlbrough, Harare",
             description: "A beautiful flower garden supporting bees and butterflies.",
             image: "images/garden-b.jpg"
         },
         {
             name: "Urban Oasis Garden",
-            location: "78 Community Ave, MetroCity",
+            location: "13 McGhlery Rd, Milton Park, Harare",
             description: "An urban garden designed for local schools and community workshops.",
             image: "images/garden-c.jpg"
         }
@@ -49,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const gardensContainer = document.getElementById("gardens-container");
 
     if (gardensContainer) {
-        gardens.forEach(garden => {
+        detailedGardens.forEach(garden => {
             const gardenCard = document.createElement("div");
             gardenCard.classList.add("garden-card");
 
@@ -75,28 +97,27 @@ document.addEventListener("DOMContentLoaded", function () {
             gardensContainer.appendChild(gardenCard);
         });
     }
-});
 
-document.addEventListener("DOMContentLoaded", function () {
+    // Events container
     const events = [
         {
             title: "Spring Planting Workshop",
             date: "March 15, 2025",
-            location: "Green Haven Garden, Cityville",
+            location: "Green Haven Garden, Mt. Pleasant, Harare",
             description: "Join us for a hands-on planting workshop where you'll learn how to grow vegetables and herbs for the season.",
             image: "images/event1.jpg"
         },
         {
             title: "Pollinator Garden Tour",
             date: "April 10, 2025",
-            location: "Pollinator Paradise, EcoTown",
+            location: "Pollinator Paradise, Marlbrough, Harare",
             description: "Explore the importance of pollinators and how our community garden supports bees and butterflies.",
             image: "images/event2.jpg"
         },
         {
             title: "Composting for Beginners",
             date: "May 5, 2025",
-            location: "Urban Oasis Garden, MetroCity",
+            location: "Urban Oasis Garden, Milton Park, Harare",
             description: "Discover the benefits of composting and learn how to create nutrient-rich soil for your garden.",
             image: "images/event3.jpg"
         }
@@ -135,9 +156,8 @@ document.addEventListener("DOMContentLoaded", function () {
             eventsContainer.appendChild(eventCard);
         });
     }
-});
 
-document.addEventListener("DOMContentLoaded", function () {
+    // Resources container
     const resources = [
         {
             title: "Getting Started with Community Gardening",
@@ -230,17 +250,4 @@ document.getElementById("involvement-form").addEventListener("submit", function(
 
     alert("Thank you for getting involved! We will contact you soon.");
     hideForm();
-});
-
-// Function to display the last modified date in the footer
-document.addEventListener("DOMContentLoaded", function () {
-    const lastModified = document.lastModified;
-    const footer = document.querySelector("footer");
-    
-    // Create a paragraph for the last modified date
-    const modifiedPara = document.createElement("p");
-    modifiedPara.textContent = `Last Modified: ${lastModified}`;
-
-    // Append it to the footer
-    footer.appendChild(modifiedPara);
 });
