@@ -161,22 +161,22 @@ document.addEventListener("DOMContentLoaded", function () {
     const resources = [
         {
             title: "Getting Started with Community Gardening",
-            author: "GreenThumb Initiative",
-            link: "https://www.example.com/community-gardening-guide",
+            author: "Rachel Surls, UCCE Master Gardener",
+            link: "https://www.aces.edu/blog/topics/business-community-urban/a-guide-to-starting-a-community-garden/",
             description: "Learn the basics of starting a community garden, from selecting a site to organizing volunteers.",
             image: "images/resource1.jpg"
         },
         {
             title: "Composting 101: Turning Waste into Gold",
-            author: "Sustainable Living Hub",
-            link: "https://www.example.com/composting-guide",
+            author: " Ryan Dorn, SouthernSeeds.com",
+            link: "https://southernseeds.com/blogs/news/composting-101-turning-waste-into-garden-gold#:~:text=Layer%20Your%20Compost%3A%20Begin%20by,ratio%20of%20browns%20to%20greens.",
             description: "Discover how to create nutrient-rich compost for your garden using food scraps and yard waste.",
             image: "images/resource2.jpg"
         },
         {
             title: "Urban Gardening: Growing Food in Small Spaces",
-            author: "Urban Green Spaces",
-            link: "https://www.example.com/urban-gardening",
+            author: "Chelsea Green",
+            link: "https://www.chelseagreen.com/2023/how-much-food-can-be-grown-in-a-small-space/?srsltid=AfmBOoqySbqI0O72fOZGEr_Fczz-yG2NqWKZKyZZM0xA9b_BmU_lnmQv",
             description: "Maximize your small space for gardening, whether on a balcony, rooftop, or small backyard.",
             image: "images/resource3.jpg"
         }
