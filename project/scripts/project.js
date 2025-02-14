@@ -232,9 +232,15 @@ document.getElementById("involvement-form").addEventListener("submit", function(
     hideForm();
 });
 
-// Dynamically set the current year
-document.getElementById('currentyear').textContent = new Date().getFullYear();
+// Function to display the last modified date in the footer
+document.addEventListener("DOMContentLoaded", function () {
+    const lastModified = document.lastModified;
+    const footer = document.querySelector("footer");
+    
+    // Create a paragraph for the last modified date
+    const modifiedPara = document.createElement("p");
+    modifiedPara.textContent = `Last Modified: ${lastModified}`;
 
-// Populate last modified date
-document.getElementById('lastModified').textContent = 'Last Modification: ' + document.lastModified;
-// Dynamically set the current year
+    // Append it to the footer
+    footer.appendChild(modifiedPara);
+});
