@@ -231,3 +231,10 @@ document.getElementById("involvement-form").addEventListener("submit", function(
     alert("Thank you for getting involved! We will contact you soon.");
     hideForm();
 });
+
+// Dynamically set the current year
+document.getElementById('currentyear').textContent = new Date().getFullYear();
+
+// Populate last modified date
+document.getElementById('lastModified').textContent = 'Last Modification: ' + document.lastModified;
+// Dynamically set the current year
