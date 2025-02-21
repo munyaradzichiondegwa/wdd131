@@ -1,157 +1,124 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-         
-         body {
-            font-family: 'Roboto', Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        
-        header {
-            background-color: #007BFF;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-        }
-        
-        footer {
-            background-color: #007BFF;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
-        }
-        
-        /* Apply the font to the entire body */
-        body {
-            font-family: 'Roboto', Arial, sans-serif;
-            color: black;
-            margin: 0;
-            padding: 0;
-            background-color: white;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
+/* Modern Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        /* Header styling */
-        header {
-            background-color: navy ;
-            color: white;
-            padding: 30px 5px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-        }
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: beige;    
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
 
-        header h1 {
-            margin: 0;
-        }
+/* Header Styling */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
 
-        header .highlight {
-            color: #ffd700;
-        }
+header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
 
-        /* Navigation styling with Flexbox */
-        nav {
-            margin-top: auto;
-            /* Move the nav to the bottom of the header */
-        }
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 1rem;
+}
 
-        nav ul {
-            display: flex;
-            justify-content: space-around;
-            list-style: none;
-            background-color: black;
-            padding: 0.5rem;
-            margin: 0;
-        }
+nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
 
-        nav ul li {
-            margin: 0 0px;
-        }
+nav a:hover {
+    color: #3498db;
+}
 
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            padding: 5px 0.2px;
-            transition: background-color 0.3s;
-        }
+/* Main Content Layout */
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+}
 
-        nav ul li a:hover {
-            background-color: yellowgreen;
-            color: black;
-        }
+.card {
+    background-color: burlywood;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-        /* Main content area using CSS Grid */
-        main {
-            display: grid;
-            grid-template-columns: 3fr 1fr;
-            flex-grow: 1;
-            /* Allow main to grow and fill the available space */
-            margin: 0;
-            /* Remove any margins */
-        }
+/* Typography */
+h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
 
-        .card {
-            background-color: white;
-            padding: 5px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
 
-        .card img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
+/* Aside Styling */
+aside ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
 
-        /* Aside content styling */
-        aside.card {
-            background-color: whitesmoke;
-            padding: 5px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+aside a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
 
-        aside.card ul {
-            list-style: none;
-            padding: 0;
-        }
+aside a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
 
-        aside.card ul li {
-            margin: 10px 0;
-        }
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+}
 
-        aside.card ul li a {
-            color: #333;
-            text-decoration: none;
-            padding: 5px 10px;
-            display: block;
-            transition: background-color 0.3s;
-        }
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
 
-        aside.card ul li a:hover {
-            background-color: yellow;
-            color: #333;
-        }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
 
-        /* Footer styling */
-        footer {
-            background-color: navy;
-            color: white;
-            text-align: center;
-            padding: 30px;
-        }
-
-        /* Media query for responsiveness */
-        @media (max-width: 768px) {
-            main {
-                grid-template-columns: 1fr;
-            }
-
-            aside.card {
-                order: -1;
-                /* Move aside above main content on small screens */
-            }
-        }
+/* Print Styles */
+@media print {
+    body {
+        font-size: 12pt;
+        background: white;
+        color: black;
+    }
+}
