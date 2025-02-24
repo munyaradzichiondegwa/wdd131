@@ -1,0 +1,525 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styles */
+.site-header {
+    background-color: #1a2b3c;
+    color: #ffffff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo .logo-image {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+}
+
+.logo ul {
+    display: flex;
+    list-style: none;
+    margin-left: 30px;
+}
+
+.logo ul li {
+    margin-right: 20px;
+}
+
+.logo ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.logo ul li a:hover {
+    color: #4fc3f7;
+}
+
+/* Page Container */
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 15px;
+}
+
+/* Team Roles Grid */
+.team-roles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.role-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.role-card:hover {
+    transform: translateY(-5px);
+}
+
+.role-card h3 {
+    color: #1a2b3c;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #4fc3f7;
+    padding-bottom: 10px;
+}
+
+.role-card ul {
+    list-style-type: none;
+}
+
+.role-card ul li {
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.role-card ul li::before {
+    content: '•';
+    color: #4fc3f7;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Footer Styles */
+.site-footer {
+    background-color: #1a2b3c;
+    color: #ffffff;
+    padding: 30px 0;
+    margin-top: 30px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+.footer-section {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-section h4 {
+    margin-bottom: 15px;
+    color: #4fc3f7;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-icon {
+    color: #ffffff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #4fc3f7;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .header-container,
+    .logo,
+    .logo ul,
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo ul {
+        margin-top: 15px;
+    }
+
+    .footer-section {
+        margin-right: 0;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+.site-header {
+    background-color: #1a2b3c;
+    color: #ffffff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo .logo-image {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+}
+
+.main-navigation ul {
+    display: flex;
+    list-style: none;
+}
+
+.main-navigation ul li {
+    margin-left: 20px;
+}
+
+.main-navigation ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.main-navigation ul li a:hover {
+    color: #4fc3f7;
+}
+
+/* Page Content Styles */
+.page-content {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 15px;
+}
+
+.about-section {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.about-section h2 {
+    color: #1a2b3c;
+    border-bottom: 3px solid #4fc3f7;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+}
+
+.about-content h3 {
+    color: #1a2b3c;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.about-content ul {
+    list-style-type: disc;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+/* Values Grid */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.value-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.value-card h4 {
+    color: #1a2b3c;
+    margin-bottom: 10px;
+}
+
+/* Footer Styles (same as previous example) */
+.site-footer {
+    background-color: #1a2b3c;
+    color: #ffffff;
+    padding: 30px 0;
+    margin-top: 30px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+.footer-section {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-section h4 {
+    margin-bottom: 15px;
+    color: #4fc3f7;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-icon {
+    color: #ffffff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #4fc3f7;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .header-container,
+    .main-navigation ul,
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-navigation ul {
+        margin-top: 15px;
+    }
+
+    .main-navigation ul li {
+        margin: 10px 0;
+    }
+
+    .footer-section {
+        margin-right: 0;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Previous CSS remains the same, with additions for mission page */
+
+/* Mission Section Specific Styles */
+.mission-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 15px;
+}
+
+.mission-section h2 {
+    color: #1a2b3c;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.mission-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: #4fc3f7;
+}
+
+/* Mission Blockquote Styling */
+blockquote {
+    font-style: italic;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #1a2b3c;
+    border-left: 4px solid #4fc3f7;
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin: 30px 0;
+    position: relative;
+    line-height: 1.8;
+}
+
+blockquote::before,
+blockquote::after {
+    content: '"';
+    font-size: 3rem;
+    color: #4fc3f7;
+    position: absolute;
+    opacity: 0.5;
+}
+
+blockquote::before {
+    top: 10px;
+    left: 10px;
+}
+
+blockquote::after {
+    bottom: 10px;
+    right: 10px;
+}
+
+/* Objectives Grid */
+.objectives-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.objective-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border-top: 4px solid #4fc3f7;
+}
+
+.objective-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.objective-card h4 {
+    color: #1a2b3c;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.objective-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Animations for Objective Cards */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.objective-card {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+.objective-card:nth-child(1) { animation-delay: 0.2s; }
+.objective-card:nth-child(2) { animation-delay: 0.4s; }
+.objective-card:nth-child(3) { animation-delay: 0.6s; }
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    blockquote {
+        font-size: 1rem;
+        padding: 15px;
+    }
+
+    .mission-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .objectives-grid {
+        grid-template-columns: 1fr;
+    }
+}
