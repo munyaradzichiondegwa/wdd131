@@ -13,91 +13,90 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <link rel="stylesheet" href="styles/zimnews.css">
     <script src="scripts/zimnews.js" defer></script>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="script/cyber.js"></script>
 </head>
 <body>
     <header class="site-header">
-        <nav class="main-nav">
-            <div class="logo">
-                <img src="images/zimnews.png" alt="Zimbabwe News Logo">
-                <h1>Zimbabwe News</h1>
-            </div>
-            <button class="menu-toggle" aria-label="Toggle Mobile Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="operations.html">Cyber Operations</a></li>
-                <li><a href="projects.html">Government Projects</a></li>
-                <li><a href="media.html">Media Center</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+    <nav class="main-nav">
+        <div class="logo">
+            <img src="images/zimnews.png" alt="Zimbabwe News Logo">
+            <h1>Zimbabwe News</h1>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle Mobile Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    
+                    <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="operations.html">Cyber Operations</a></li>
+                    <li><a href="projects.html">Government Projects</a></li>
+                    <li><a href="roles.html">Roles &amp; Responsibility</a></li>
+                    <li><a href="media.html">Media Center</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main class="contact-content">
-        <section class="contact-hero">
-            <h2>Get in Touch with Zimbabwe News</h2>
-            <p>We Value Your Communication and Feedback</p>
+    <main class="page-content">
+        <section class="hero">
+            <img src="images/hero-image.jpg" alt="Presidential Cyber Unit in Action" class="hero-image">
+            <div class="hero-overlay">
+                <h2>Bridging Digital Communication</h2>
+                <p class="hero-subtitle">We are the strategic interface between government communication and digital innovation, ensuring transparent, secure, and effective digital engagement.</p>
+                <a href="about.html" class="cta-button">Discover Our Mission</a>
+            </div>
         </section>
-
-        <section class="contact-form">
-            <form id="contactForm" class="form-container">
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" required>
+        <section class="contact-section">
+            <h2>Contact Presidential Communication Unit</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <h3>General Inquiries</h3>
+                        <p>Email: pcu.cyber@gmail.com</p>
+                        <p>Phone: +263 713 794 347</p>
+                    </div>
+                    <div class="contact-card">
+                        <h3>Media Relations</h3>
+                        <p>Email: infor.pcu@gmail.com</p>
+                        <p>Phone: +263 735 252 787</p>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Your Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <div class="form-group">
-                    <button type="submit" class="submit-button">Send Message</button>
-                </div>
-            </form>
-        </section>
-
-        <section class="contact-info">
-            <div class="contact-details">
-                <h3>Contact Information</h3>
-                <p>Email: info@zimbabwenews.gov.zw</p>
-                <p>Phone: +263 (0) 123 456 789</p>
-                <p>Address: Government Complex, Harare, Zimbabwe</p>
+                <form class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <input type="text" placeholder="Your Name" aria-label="Your Name" required>
+                    <input type="email" placeholder="Your Email" aria-label="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
-        <div class="footer-content">
-            <p>&copy; 2025 Zimbabwe News. All Rights Reserved.</p>
-            <div class="social-links">
-                <a href="#" class="social-icon">Twitter</a>
-                <a href="#" class="social-icon">Facebook</a>
-                <a href="#" class="social-icon">Instagram</a>
-            </div>
-        </div>
         <footer class="site-footer">
-            <div class="footer-metadata">
-                <div id="currentDateTime" class="metadata-item"></div>
-                <div id="weatherInfo" class="metadata-item"></div>
-                <div class="metadata-item">
-                    Last Updated: <span id="lastModified"></span>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Presidential Communication Unit</h4>
+                    <p>Strategic Communication &amp; Operational Excellence</p>
                 </div>
+               
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">Official Channels</a>
+                        <a href="#" class="social-icon">Press Releases</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Presidential Communication Unit. All Rights Reserved.</p>
             </div>
         </footer>
     </footer>
-
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message. We will get back to you soon!');
-            this.reset();
-        });
-    </script>
 </body>
 </html>

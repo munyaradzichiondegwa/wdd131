@@ -18,6 +18,49 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    document.addEventListener('DOMContentLoaded', () => {
+        const heroSection = document.querySelector('.hero-section');
+        const heroOverlay = document.querySelector('.hero-overlay');
+        const heroImage = heroSection.querySelector('img');
+    
+        // Hero Section Reveal Animation
+        function revealHeroSection() {
+            heroOverlay.classList.add('visible');
+        }
+    
+        // Parallax Effect
+        function handleParallaxScroll() {
+            const scrollPosition = window.pageYOffset;
+            heroImage.style.transform = `translateY(${scrollPosition * 0.5}px)`;
+        }
+    
+        // Interactive Hero Image Hover Effect
+        function handleHeroImageHover() {
+            heroImage.addEventListener('mouseenter', () => {
+                heroImage.style.transform = 'scale(1.05)';
+            });
+    
+            heroImage.addEventListener('mouseleave', () => {
+                heroImage.style.transform = 'scale(1)';
+            });
+        }
+    
+        // Initialize Hero Section Interactions
+        function initHeroInteractions() {
+            // Delayed reveal
+            setTimeout(revealHeroSection, 300);
+    
+            // Parallax scrolling
+            window.addEventListener('scroll', handleParallaxScroll);
+    
+            // Hover effect
+            handleHeroImageHover();
+        }
+    
+        // Run initialization
+        initHeroInteractions();
+    });
+
     // CTA Button Animation
     const ctaButton = document.querySelector('.cta-button');
     if (ctaButton) {
@@ -32,6 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Tracking and logging
     console.log('Zimbabwe News Digital Platform Initialized');
 });
+
 
 // app.js - Comprehensive JavaScript for Zimbabwe News Website
 
@@ -415,3 +459,91 @@ function init() {
 
 // Ensure init runs when DOM is fully loaded
 document.addEventListener('DOMContentLoaded', init);
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Mobile Menu Toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+    });
+
+    // Date and Time Display
+    function updateDateTime() {
+        const currentDateElement = document.getElementById('current-date');
+        const currentDateTimeElement = document.getElementById('currentDateTime');
+        const now = new Date();
+        
+        const options = {
+            weekday: 'long', 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric',
+            hour: '2-digit', 
+            minute: '2-digit', 
+            second: '2-digit'
+        };
+        
+        const formattedDate = now.toLocaleDateString('en-ZW', options);
+        
+        if (currentDateElement) {
+            currentDateElement.textContent = formattedDate;
+        }
+        
+        if (currentDateTimeElement) {
+            currentDateTimeElement.textContent = formattedDate;
+        }
+    }
+
+    // Weather Function (Mock Implementation)
+    async function fetchWeather() {
+        const weatherElement = document.getElementById('weatherInfo');
+        
+        try {
+            // Mock weather data for Harare, Zimbabwe
+            const weatherData = {
+                temperature: 25,
+                description: 'Partly Cloudy',
+                location: 'Harare'
+            };
+
+            if (weatherElement) {
+                weatherElement.innerHTML = `
+                    <span>${weatherData.location}</span>
+                    <span>${weatherData.temperature}°C</span>
+                    <span>${weatherData.description}</span>
+                `;
+            }
+        } catch (error) {
+            console.error('Weather fetch error:', error);
+        }
+    }
+
+    // Last Modified Date
+    function updateLastModified() {
+        const lastModifiedElement = document.getElementById('lastModified');
+        if (lastModifiedElement) {
+            const lastModified = new Date(document.lastModified);
+            lastModifiedElement.textContent = lastModified.toLocaleDateString('en-ZW', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+        }
+    }
+
+    // Initial Updates
+    updateDateTime();
+    fetchWeather();
+    updateLastModified();
+
+    // Update date and time every second
+    setInterval(updateDateTime, 1000);
+
+    // Update weather periodically
+    setInterval(fetchWeather, 600000); // Every 10 minutes
+});
