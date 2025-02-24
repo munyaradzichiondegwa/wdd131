@@ -17,7 +17,7 @@ body {
     background-color: #1a2b3c;
     color: #ffffff;
     padding: 1rem 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .header-container {
@@ -132,13 +132,13 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .cta-button:hover {
     background-color: #03a9f4;
     transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 768px) {
@@ -155,6 +155,7 @@ body {
         font-size: 1rem;
     }
 }
+
 /* Page Container */
 .page-container {
     max-width: 1200px;
@@ -173,7 +174,7 @@ body {
     background-color: #ffffff;
     border-radius: 8px;
     padding: 20px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
@@ -250,12 +251,13 @@ body {
 .footer-bottom {
     text-align: center;
     padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     margin-top: 20px;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
+
     .header-container,
     .logo,
     .logo ul,
@@ -297,7 +299,7 @@ body {
     background-color: #1a2b3c;
     color: #ffffff;
     padding: 1rem 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .header-container {
@@ -355,7 +357,7 @@ body {
     background-color: #ffffff;
     border-radius: 8px;
     padding: 30px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .about-section h2 {
@@ -398,7 +400,7 @@ body {
 
 .value-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .value-card h4 {
@@ -451,12 +453,13 @@ body {
 .footer-bottom {
     text-align: center;
     padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     margin-top: 20px;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
+
     .header-container,
     .main-navigation ul,
     .footer-content {
@@ -556,14 +559,14 @@ blockquote::after {
     border-radius: 10px;
     padding: 25px;
     text-align: center;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     border-top: 4px solid #4fc3f7;
 }
 
 .objective-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .objective-card h4 {
@@ -583,6 +586,7 @@ blockquote::after {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -594,9 +598,17 @@ blockquote::after {
     opacity: 0;
 }
 
-.objective-card:nth-child(1) { animation-delay: 0.2s; }
-.objective-card:nth-child(2) { animation-delay: 0.4s; }
-.objective-card:nth-child(3) { animation-delay: 0.6s; }
+.objective-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.objective-card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.objective-card:nth-child(3) {
+    animation-delay: 0.6s;
+}
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
@@ -659,7 +671,7 @@ blockquote::after {
 .cta-button:hover {
     background-color: #03a9f4;
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 768px) {
@@ -675,6 +687,7 @@ blockquote::after {
         font-size: 1rem;
     }
 }
+
 /* Contact Content Layout */
 .contact-content {
     display: grid;
@@ -694,14 +707,14 @@ blockquote::after {
     background-color: #ffffff;
     border-radius: 10px;
     padding: 25px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     border-left: 4px solid #4fc3f7;
     transition: all 0.3s ease;
 }
 
 .contact-card:hover {
     transform: translateX(10px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .contact-card h3 {
@@ -722,7 +735,7 @@ blockquote::after {
     background-color: #f9f9f9;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form h3 {
@@ -768,7 +781,7 @@ blockquote::after {
 .contact-form .btn:hover {
     background-color: #03a9f4;
     transform: translateY(-3px);
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Form Validation Styles */
@@ -799,6 +812,7 @@ blockquote::after {
         opacity: 0;
         transform: translateX(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -811,8 +825,13 @@ blockquote::after {
     opacity: 0;
 }
 
-.contact-card { animation-delay: 0.2s; }
-.contact-form { animation-delay: 0.4s; }
+.contact-card {
+    animation-delay: 0.2s;
+}
+
+.contact-form {
+    animation-delay: 0.4s;
+}
 
 /* Previous CSS remains the same, with additions for about page */
 
@@ -893,6 +912,7 @@ blockquote::after {
         font-size: 1rem;
     }
 }
+
 .about-section h2::after {
     content: '';
     position: absolute;
@@ -908,10 +928,10 @@ blockquote::after {
     background-color: #ffffff;
     border-radius: 12px;
     padding: 40px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-.about-content > p {
+.about-content>p {
     color: #333;
     line-height: 1.6;
     margin-bottom: 30px;
@@ -969,14 +989,14 @@ blockquote::after {
     border-radius: 10px;
     padding: 25px;
     text-align: center;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     border-top: 4px solid #4fc3f7;
 }
 
 .value-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .value-card h4 {
@@ -1009,22 +1029,31 @@ blockquote::after {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-.about-content > p,
+.about-content>p,
 .about-content ul li,
 .value-card {
     animation: fadeIn 0.6s ease forwards;
     opacity: 0;
 }
 
-.about-content > p { animation-delay: 0.2s; }
-.about-content ul li { animation-delay: 0.4s; }
-.value-card { animation-delay: 0.6s; }
+.about-content>p {
+    animation-delay: 0.2s;
+}
+
+.about-content ul li {
+    animation-delay: 0.4s;
+}
+
+.value-card {
+    animation-delay: 0.6s;
+}
 
 /* Support Section Styles */
 .support-section {
@@ -1057,7 +1086,7 @@ blockquote::after {
     background-color: #ffffff;
     border-radius: 12px;
     padding: 40px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .support-options {
@@ -1073,12 +1102,12 @@ blockquote::after {
     text-align: center;
     transition: all 0.3s ease;
     border-top: 4px solid #4fc3f7;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
 }
 
 .support-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
 }
 
 .support-card h3 {
@@ -1123,6 +1152,7 @@ blockquote::after {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1134,9 +1164,17 @@ blockquote::after {
     opacity: 0;
 }
 
-.support-card:nth-child(1) { animation-delay: 0.2s; }
-.support-card:nth-child(2) { animation-delay: 0.4s; }
-.support-card:nth-child(3) { animation-delay: 0.6s; }
+.support-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.support-card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.support-card:nth-child(3) {
+    animation-delay: 0.6s;
+}
 
 /* Interaction Overlay */
 .support-card::before {

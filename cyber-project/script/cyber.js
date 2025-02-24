@@ -1,12 +1,12 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Smooth scroll for navigation links
     const navLinks = document.querySelectorAll('a[href^="#"], a[href^="."]');
     navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
+        link.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             const targetElement = document.querySelector(targetId);
-            
+
             if (targetElement) {
                 targetElement.scrollIntoView({
                     behavior: 'smooth'
@@ -18,11 +18,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Simple role card hover effect
     const roleCards = document.querySelectorAll('.role-card');
     roleCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
+        card.addEventListener('mouseenter', function () {
             this.style.transform = 'scale(1.05)';
         });
 
-        card.addEventListener('mouseleave', function() {
+        card.addEventListener('mouseleave', function () {
             this.style.transform = 'scale(1)';
         });
     });
@@ -30,11 +30,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Value cards interaction
     const valueCards = document.querySelectorAll('.value-card');
     valueCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
+        card.addEventListener('mouseenter', function () {
             this.style.transform = 'scale(1.05)';
         });
 
-        card.addEventListener('mouseleave', function() {
+        card.addEventListener('mouseleave', function () {
             this.style.transform = 'scale(1)';
         });
     });
@@ -42,11 +42,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Objective Cards Interaction
     const objectiveCards = document.querySelectorAll('.objective-card');
     objectiveCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
+        card.addEventListener('mouseenter', function () {
             this.style.transform = 'scale(1.05)';
         });
 
-        card.addEventListener('mouseleave', function() {
+        card.addEventListener('mouseleave', function () {
             this.style.transform = 'scale(1)';
         });
     });
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Simple form validation (if contact form exists)
     const contactFormValidation = document.querySelector('.contact-form');
     if (contactFormValidation) {
-        contactFormValidation.addEventListener('submit', function(e) {
+        contactFormValidation.addEventListener('submit', function (e) {
             const inputs = this.querySelectorAll('input, textarea');
             let isValid = true;
 
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const missionBlockquote = document.querySelector('blockquote');
     if (missionBlockquote) {
         const text = missionBlockquote.textContent;
-        missionBlockquote.innerHTML = text.split('').map(char => 
+        missionBlockquote.innerHTML = text.split('').map(char =>
             `<span style="display:inline-block; opacity:0; animation: fadeIn 0.5s forwards;">${char}</span>`
         ).join('');
 
@@ -124,9 +124,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Contact Form Submission Handling
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
-            
+
             // Basic form validation
             const name = this.querySelector('input[placeholder="Your Name"]');
             const email = this.querySelector('input[placeholder="Your Email"]');
@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const submitButton = this.querySelector('.btn');
                 submitButton.textContent = 'Message Sent!';
                 submitButton.style.backgroundColor = '#4caf50';
-                
+
                 // Reset form after submission
                 setTimeout(() => {
                     this.reset();
@@ -174,18 +174,18 @@ document.addEventListener('DOMContentLoaded', function() {
     // Dynamic Contact Card Hover Effects
     const contactCards = document.querySelectorAll('.contact-card');
     contactCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
+        card.addEventListener('mouseenter', function () {
             this.style.transform = 'scale(1.03)';
         });
 
-        card.addEventListener('mouseleave', function() {
+        card.addEventListener('mouseleave', function () {
             this.style.transform = 'scale(1)';
         });
     });
 
     // Copy Contact Information
     contactCards.forEach(card => {
-        card.addEventListener('click', function() {
+        card.addEventListener('click', function () {
             const contactInfo = this.innerText.split('\n')[1]; // Get first contact line
             navigator.clipboard.writeText(contactInfo).then(() => {
                 // Optional: Show tooltip or temporary feedback
@@ -199,254 +199,225 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Previous JS code remains the same, with additions for about page
+// Previous JS code remains the same, with additions for about page
 
-    // Value Cards Interactive Effects
-    const valueCards = document.querySelectorAll('.value-card');
-    valueCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'scale(1.05) translateY(-15px)';
-            this.style.boxShadow = '0 15px 25px rgba(0,0,0,0.2)';
-        });
-
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'scale(1) translateY(0)';
-            this.style.boxShadow = '0 6px 12px rgba(0,0,0,0.1)';
-        });
+// Value Cards Interactive Effects
+const valueCards = document.querySelectorAll('.value-card');
+valueCards.forEach(card => {
+    card.addEventListener('mouseenter', function () {
+        this.style.transform = 'scale(1.05) translateY(-15px)';
+        this.style.boxShadow = '0 15px 25px rgba(0,0,0,0.2)';
     });
 
-    // Scroll Animation for Core Responsibilities
-    const responsibilitiesList = document.querySelector('.about-content ul');
-    if (responsibilitiesList) {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('list-animated');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        observer.observe(responsibilitiesList);
-    }
-
-    // Dynamic Content Loading (Optional)
-    function loadAdditionalContent() {
-        const additionalInfo = document.createElement('div');
-        additionalInfo.classList.add('additional-info');
-        additionalInfo.innerHTML = `
-            <h3>Our Digital Transformation</h3>
-            <p>The Presidential Communication Unit is at the forefront of digital communication strategies, leveraging cutting-edge technologies to enhance government-citizen interactions.</p>
-        `;
-        
-        const aboutContent = document.querySelector('.about-content');
-        if (aboutContent) {
-            aboutContent.appendChild(additionalInfo);
-        }
-    }
-
-    // Uncomment if you want to dynamically load additional content
-    // loadAdditionalContent();
-
-    // Accessibility Enhancements
-    valueCards.forEach(card => {
-        card.setAttribute('tabindex', '0');
-        card.addEventListener('keydown', function(e) {
-            if (e.key === 'Enter' || e.key === ' ') {
-                this.focus();
-            }
-        });
+    card.addEventListener('mouseleave', function () {
+        this.style.transform = 'scale(1) translateY(0)';
+        this.style.boxShadow = '0 6px 12px rgba(0,0,0,0.1)';
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Support Cards Interactive Effects
-    const supportCards = document.querySelectorAll('.support-card');
-    
-    supportCards.forEach(card => {
-        // Card Hover Depth Effect
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-15px) scale(1.02)';
-            this.style.boxShadow = '0 15px 30px rgba(0,0,0,0.15)';
-        });
-
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
-            this.style.boxShadow = '0 6px 15px rgba(0,0,0,0.08)';
-        });
-
-        // Accessibility Enhancements
-        card.setAttribute('tabindex', '0');
-        card.addEventListener('keydown', function(e) {
-            if (e.key === 'Enter' || e.key === ' ') {
-                const btn = this.querySelector('.btn');
-                if (btn) btn.click();
+// Scroll Animation for Core Responsibilities
+const responsibilitiesList = document.querySelector('.about-content ul');
+if (responsibilitiesList) {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('list-animated');
             }
         });
+    }, { threshold: 0.1 });
+
+    observer.observe(responsibilitiesList);
+}
+
+
+// Accessibility Enhancements
+valueCards.forEach(card => {
+    card.setAttribute('tabindex', '0');
+    card.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+            this.focus();
+        }
+    });
+});
+
+// Support Cards Interactive Effects
+const supportCards = document.querySelectorAll('.support-card');
+
+supportCards.forEach(card => {
+    // Card Hover Depth Effect
+    card.addEventListener('mouseenter', function () {
+        this.style.transform = 'translateY(-15px) scale(1.02)';
+        this.style.boxShadow = '0 15px 30px rgba(0,0,0,0.15)';
     });
 
-    // Dynamic Content Loading
-    function loadSupportResources() {
-        const supportOptions = document.querySelector('.support-options');
-        
-        if (supportOptions) {
-            const emergencyCard = document.createElement('div');
-            emergencyCard.classList.add('support-card');
-            emergencyCard.innerHTML = `
+    card.addEventListener('mouseleave', function () {
+        this.style.transform = 'translateY(0) scale(1)';
+        this.style.boxShadow = '0 6px 15px rgba(0,0,0,0.08)';
+    });
+
+    // Accessibility Enhancements
+    card.setAttribute('tabindex', '0');
+    card.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+            const btn = this.querySelector('.btn');
+            if (btn) btn.click();
+        }
+    });
+});
+
+// Dynamic Content Loading
+function loadSupportResources() {
+    const supportOptions = document.querySelector('.support-options');
+
+    if (supportOptions) {
+        const emergencyCard = document.createElement('div');
+        emergencyCard.classList.add('support-card');
+        emergencyCard.innerHTML = `
                 <h3>Emergency Support</h3>
                 <p>Urgent communication and crisis management resources</p>
                 <a href="#" class="btn">Emergency Protocols</a>
             `;
-            
-            supportOptions.appendChild(emergencyCard);
-            
-            // Animate the new card
-            emergencyCard.style.opacity = '0';
-            emergencyCard.style.animation = 'fadeInUp 0.6s ease forwards';
-            emergencyCard.style.animationDelay = '0.8s';
-        }
+
+        supportOptions.appendChild(emergencyCard);
+
+        // Animate the new card
+        emergencyCard.style.opacity = '0';
     }
+}
 
-    // Uncomment to dynamically add emergency support card
-    // loadSupportResources();
+setupModalInteractions();
 
-    // Interactive Modal Simulation (placeholder)
-    function setupModalInteractions() {
-        const buttons = document.querySelectorAll('.btn');
-        
-        buttons.forEach(btn => {
-            btn.addEventListener('click', function(e) {
-                e.preventDefault();
-                console.log(`Clicked: ${this.textContent}`);
-                
-                // Simulated interaction feedback
-                this.style.backgroundColor = '#03a9f4';
-                setTimeout(() => {
-                    this.style.backgroundColor = '#4fc3f7';
-                }, 300);
-            });
+// Performance and Tracking Placeholder
+function trackUserInteractions() {
+    supportCards.forEach(card => {
+        card.addEventListener('click', function () {
+            // Placeholder for analytics tracking
+            console.log(`Interaction with: ${this.querySelector('h3').textContent}`);
         });
-    }
+    });
+}
 
-    setupModalInteractions();
+trackUserInteractions();
 
-    // Performance and Tracking Placeholder
-    function trackUserInteractions() {
+// script.js
+document.addEventListener('DOMContentLoaded', () => {
+    // Smooth scrolling for navigation links
+    const navLinks = document.querySelectorAll('.main-navigation a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            if (link.getAttribute('href').startsWith('#') ||
+                link.getAttribute('href').startsWith('.')) {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }
+        });
+    });
+
+    // Interactive value cards
+    const valueCards = document.querySelectorAll('.value-card');
+    valueCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.classList.add('hover-effect');
+        });
+
+        // Performance and Tracking Placeholder
         supportCards.forEach(card => {
-            card.addEventListener('click', function() {
+            card.addEventListener('click', function () {
                 // Placeholder for analytics tracking
                 console.log(`Interaction with: ${this.querySelector('h3').textContent}`);
             });
         });
+    });
+    if (aboutContent) {
+        aboutContent.appendChild(loadMoreBtn);
+
+        loadMoreBtn.addEventListener('click', () => {
+            const hiddenSections = document.querySelectorAll('.hidden-section');
+            hiddenSections.forEach(section => {
+                section.classList.remove('hidden-section');
+                section.classList.add('visible-section');
+            });
+            loadMoreBtn.style.display = 'none';
+        });
     }
 
-    trackUserInteractions();
+    // Accessibility improvements
+    const improveAccessibility = () => {
+        // Add aria labels to improve screen reader experience
+        const mainNavigation = document.querySelector('.main-navigation');
+        if (mainNavigation) {
+            mainNavigation.setAttribute('aria-label', 'Main Navigation Menu');
+        }
+
+        // Ensure proper color contrast and focus states
+        const focusableElements = document.querySelectorAll('a, button, input');
+        focusableElements.forEach(element => {
+            element.addEventListener('focus', () => {
+                element.classList.add('focus-visible');
+            });
+
+            element.addEventListener('blur', () => {
+                element.classList.remove('focus-visible');
+            });
+        });
+    };
+
+    // Add additional CSS for the enhanced functionality
+    const styleTag = document.createElement('style');
+    styleTag.textContent = `
+        .value-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .value-card.hover-effect {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .load-more-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .hidden-section {
+            display: none;
+        }
+        .visible-section {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    `;
+    document.head.appendChild(styleTag);
+
+    // Run accessibility improvements
+    improveAccessibility();
+
+    // Optional: Console log for monitoring page load
+    console.log('Presidential Communication Unit page loaded successfully');
 });
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About PCU | Presidential Communication Unit</title>
-    <meta name="description" content="Explore the various roles and responsibilities within the Presidential Communication Unit.">
-    <meta name="keywords" content="organization, team roles, communication, government">
-    <meta name="author" content="Munyaradzi Chiondegwa">
-    <link rel="stylesheet" href="styles.css">
-    <script src="script/cyber.js"></script>
-</head>
-<body>
-    <header class="site-header">
-        <div class="header-container">
-            <div class="logo">
-                <img src="images/logo.png" alt="PCU Logo" class="logo-image">
-                <h1>Presidential Communication Unit</h1>
-            </div>
-            <nav class="main-navigation">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About PCU</a></li>
-                    <li><a href="mission.html">Our Mission</a></li>
-                    <li><a href="roles.html">Roles</a></li>
-                    <li><a href="support.html">Support</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main class="page-content">
-        <section class="about-section">
-            <img src="images/presidential-image.jpg" alt="Presidential Cyber Unit in Action" class="presidential-image">
-            <div class="hero-overlay">
-                <h2>About the Presidential Communication Unit</h2>
-                <p>The Presidential Cyber Unit (PCU) is a critical infrastructure responsible for managing and strategizing communication efforts for the highest levels of government. Our mission is to enhance the government's digital presence, ensure cybersecurity, and effectively communicate government initiatives to the public.</p>
-            </div>
-        </section>
-
-        <div class="about-content">
-            <p>The Presidential Cyber Unit is a specialized team established to enhance the 
-                government's digital presence, ensure cybersecurity, and effectively communicate 
-                government initiatives to the public. In the context of the Second Republic, the unit 
-                plays a pivotal role in articulating government programs, showcasing projects, and 
-                fostering public engagement through digital platforms</p>
-            
-            <h3>Our Core Responsibilities</h3>
-            <ul>
-                <li>Strategic Communication Management</li>
-                <p>Craft clear, consistent, and compelling narratives around government programs to ensure public understanding and support.
-                - Highlight the benefits and impact of these programs on citizens' lives.
-                 </p>
-                <li>Public Information Dissemination</li>
-                <p> - Foster two-way communication with citizens by responding to queries, feedback, and concerns on social media.
-                    - Use analytics to understand public sentiment and tailor communication strategies accordingly.</p>
-                <li>Media Engagement and Relations</li>
-                <p>- Partner with media houses, influencers, and community leaders to amplify reach.
-                    - Engage with international organizations to showcase the Second Republic's achievements on a global stage.
-                 </p>
-                <li>Digital and Traditional Media Coordination</li>
-                <p>- Utilize platforms like Twitter, Facebook, Instagram, and YouTube to reach a wide audience.
-                - Leverage live streaming for real-time updates and engagement.
-                - Create visually appealing content such as videos, animations, and infographics.
-                - Use storytelling techniques to make government programs relatable and impactful.</p>
-            </ul>
-
-            <h3>Our Values</h3>
-            <div class="values-grid">
-                <div class="value-card">
-                    <h4>Transparency</h4>
-                    <p>Committed to open and clear communication</p>
-                </div>
-                <div class="value-card">
-                    <h4>Integrity</h4>
-                    <p>Maintaining the highest standards of ethical communication</p>
-                </div>
-                <div class="value-card">
-                    <h4>Responsiveness</h4>
-                    <p>Quick and accurate communication in all scenarios</p>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <footer class="site-footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Presidential Communication Unit</h4>
-                <p>Strategic Communication &amp; Operational Excellence</p>
-            </div>
-            <div class="footer-section">
-                <h4>Follow Us</h4>
-                <div class="social-icons">
-                    <a href="#" class="social-icon">Official Channels</a>
-                    <a href="#" class="social-icon">Press Releases</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2025 Presidential Communication Unit. All Rights Reserved.</p>
-        </div>
-    </footer>
-</body>
-</html>
+// Error tracking and logging
+window.addEventListener('error', (event) => {
+    console.error('An error occurred:', {
+        message: event.message,
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno,
+        error: event.error
+    });
+});
