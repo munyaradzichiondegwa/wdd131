@@ -342,3 +342,111 @@ document.addEventListener('DOMContentLoaded', function() {
 
     trackUserInteractions();
 });
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About PCU | Presidential Communication Unit</title>
+    <meta name="description" content="Explore the various roles and responsibilities within the Presidential Communication Unit.">
+    <meta name="keywords" content="organization, team roles, communication, government">
+    <meta name="author" content="Munyaradzi Chiondegwa">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script/cyber.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="PCU Logo" class="logo-image">
+                <h1>Presidential Communication Unit</h1>
+            </div>
+            <nav class="main-navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About PCU</a></li>
+                    <li><a href="mission.html">Our Mission</a></li>
+                    <li><a href="roles.html">Roles</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <section class="about-section">
+            <img src="images/presidential-image.jpg" alt="Presidential Cyber Unit in Action" class="presidential-image">
+            <div class="hero-overlay">
+                <h2>About the Presidential Communication Unit</h2>
+                <p>The Presidential Cyber Unit (PCU) is a critical infrastructure responsible for managing and strategizing communication efforts for the highest levels of government. Our mission is to enhance the government's digital presence, ensure cybersecurity, and effectively communicate government initiatives to the public.</p>
+            </div>
+        </section>
+
+        <div class="about-content">
+            <p>The Presidential Cyber Unit is a specialized team established to enhance the 
+                government's digital presence, ensure cybersecurity, and effectively communicate 
+                government initiatives to the public. In the context of the Second Republic, the unit 
+                plays a pivotal role in articulating government programs, showcasing projects, and 
+                fostering public engagement through digital platforms</p>
+            
+            <h3>Our Core Responsibilities</h3>
+            <ul>
+                <li>Strategic Communication Management</li>
+                <p>Craft clear, consistent, and compelling narratives around government programs to ensure public understanding and support.
+                - Highlight the benefits and impact of these programs on citizens' lives.
+                 </p>
+                <li>Public Information Dissemination</li>
+                <p> - Foster two-way communication with citizens by responding to queries, feedback, and concerns on social media.
+                    - Use analytics to understand public sentiment and tailor communication strategies accordingly.</p>
+                <li>Media Engagement and Relations</li>
+                <p>- Partner with media houses, influencers, and community leaders to amplify reach.
+                    - Engage with international organizations to showcase the Second Republic's achievements on a global stage.
+                 </p>
+                <li>Digital and Traditional Media Coordination</li>
+                <p>- Utilize platforms like Twitter, Facebook, Instagram, and YouTube to reach a wide audience.
+                - Leverage live streaming for real-time updates and engagement.
+                - Create visually appealing content such as videos, animations, and infographics.
+                - Use storytelling techniques to make government programs relatable and impactful.</p>
+            </ul>
+
+            <h3>Our Values</h3>
+            <div class="values-grid">
+                <div class="value-card">
+                    <h4>Transparency</h4>
+                    <p>Committed to open and clear communication</p>
+                </div>
+                <div class="value-card">
+                    <h4>Integrity</h4>
+                    <p>Maintaining the highest standards of ethical communication</p>
+                </div>
+                <div class="value-card">
+                    <h4>Responsiveness</h4>
+                    <p>Quick and accurate communication in all scenarios</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Presidential Communication Unit</h4>
+                <p>Strategic Communication &amp; Operational Excellence</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">Official Channels</a>
+                    <a href="#" class="social-icon">Press Releases</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Presidential Communication Unit. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
