@@ -41,58 +41,84 @@
         <section class="projects-hero">
             <h2>Second Republic Projects Showcase</h2>
             <p>Transforming Zimbabwe through Strategic Initiatives</p>
+            <div class="hero-media">
+                <button id="openMediaGallery" class="btn-media-gallery">
+                    View Project Gallery
+                </button>
+            </div>
         </section>
-
+    
         <section class="project-categories">
             <div class="project-grid">
-                <div class="project-card">
+                <div class="project-card" data-category="infrastructure">
                     <h3>Infrastructure Development</h3>
                     <ul>
                         <li>Road Construction Projects</li>
                         <li>Airport Modernization</li>
                         <li>Energy Infrastructure</li>
                     </ul>
+                    <div class="media-links">
+                        <button class="view-media" data-category="infrastructure">
+                            View Media
+                        </button>
+                    </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card" data-category="social">
                     <h3>Social Programs</h3>
                     <ul>
                         <li>Healthcare Initiatives</li>
                         <li>Education Reforms</li>
                         <li>Poverty Alleviation</li>
                     </ul>
+                    <div class="media-links">
+                        <button class="view-media" data-category="social">
+                            View Media
+                        </button>
+                    </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card" data-category="economic">
                     <h3>Economic Initiatives</h3>
                     <ul>
                         <li>Job Creation Programs</li>
                         <li>Entrepreneurship Support</li>
                         <li>Industrial Growth Strategies</li>
                     </ul>
+                    <div class="media-links">
+                        <button class="view-media" data-category="economic">
+                            View Media
+                        </button>
+                    </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card" data-category="environmental">
                     <h3>Environmental Projects</h3>
                     <ul>
                         <li>Climate Change Mitigation</li>
                         <li>Renewable Energy</li>
                         <li>Conservation Efforts</li>
                     </ul>
+                    <div class="media-links">
+                        <button class="view-media" data-category="environmental">
+                            View Media
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
-
-        <section class="project-details">
-            <h2>Detailed Project Insights</h2>
-            <div class="project-timeline">
-                <div class="timeline-item">
-                    <h3>Infrastructure Expansion 2023-2025</h3>
-                    <p>Comprehensive road and transportation network upgrade</p>
+    
+        <!-- Media Modal -->
+        <div id="mediaModal" class="media-modal">
+            <div class="media-modal-content">
+                <span class="close-modal">&times;</span>
+                <h2 id="modalTitle">Project Media</h2>
+                <div id="mediaContainer" class="media-container">
+                    <!-- Dynamically populated media content -->
                 </div>
-                <div class="timeline-item">
-                    <h3>Digital Transformation Initiative</h3>
-                    <p>Enhancing ICT infrastructure and digital literacy</p>
+                <div class="media-navigation">
+                    <button id="prevMedia">Previous</button>
+                    <button id="nextMedia">Next</button>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer class="site-footer">

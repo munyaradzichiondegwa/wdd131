@@ -41,52 +41,93 @@
         <section class="media-hero">
             <h2>Zim News Media Center</h2>
             <p>Official Communication and Press Resources</p>
+            <div class="hero-actions">
+                <button id="latestMediaBtn" class="btn-primary">
+                    Latest Media Highlights
+                </button>
+            </div>
         </section>
-
+    
         <section class="media-resources">
             <div class="resource-grid">
-                <div class="resource-card">
+                <div class="resource-card" data-category="press-releases">
                     <h3>Press Releases</h3>
                     <ul>
                         <li>Latest Government Announcements</li>
                         <li>Policy Updates</li>
                         <li>Official Statements</li>
                     </ul>
+                    <div class="resource-media-actions">
+                        <button class="view-media" data-category="press-releases">
+                            View Related Media
+                        </button>
+                    </div>
                 </div>
-                <div class="resource-card">
+                <div class="resource-card" data-category="multimedia">
                     <h3>Multimedia Gallery</h3>
                     <ul>
                         <li>Photo Galleries</li>
                         <li>Video Documentaries</li>
                         <li>Infographic Reports</li>
                     </ul>
+                    <div class="resource-media-actions">
+                        <button class="view-media" data-category="multimedia">
+                            Explore Gallery
+                        </button>
+                    </div>
                 </div>
-                <div class="resource-card">
+                <div class="resource-card" data-category="media-contacts">
                     <h3>Media Contacts</h3>
                     <ul>
                         <li>Press Inquiry Channels</li>
                         <li>Media Liaison Information</li>
                         <li>Communication Guidelines</li>
                     </ul>
+                    <div class="resource-media-actions">
+                        <button class="view-media" data-category="media-contacts">
+                            Contact Resources
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
-
+    
         <section class="recent-media">
             <h2>Recent Media Highlights</h2>
             <div class="media-timeline">
                 <div class="media-item">
                     <h3>Government Digital Strategy Launch</h3>
                     <p>Comprehensive digital transformation roadmap unveiled</p>
+                    <button class="media-details-btn" data-event="digital-strategy">
+                        View Event Details
+                    </button>
                 </div>
                 <div class="media-item">
                     <h3>Cybersecurity Enhancement Program</h3>
                     <p>New initiatives to protect national digital infrastructure</p>
+                    <button class="media-details-btn" data-event="cybersecurity">
+                        View Event Details
+                    </button>
                 </div>
             </div>
         </section>
+    
+        <!-- Media Modal -->
+        <div id="mediaModal" class="media-modal">
+            <div class="media-modal-content">
+                <span class="close-modal">&times;</span>
+                <h2 id="modalTitle">Media Gallery</h2>
+                <div id="mediaContainer" class="media-container">
+                    <!-- Dynamically populated media content -->
+                </div>
+                <div class="media-navigation">
+                    <button id="prevMedia">Previous</button>
+                    <button id="nextMedia">Next</button>
+                </div>
+            </div>
+        </div>
     </main>
-
+    
     <footer class="site-footer">
         <div class="footer-content">
             <p>&copy; 2025 Zim News📰. All Rights Reserved.</p>
