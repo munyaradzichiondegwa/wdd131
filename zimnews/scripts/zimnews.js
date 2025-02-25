@@ -547,3 +547,188 @@ document.addEventListener('DOMContentLoaded', () => {
     // Update weather periodically
     setInterval(fetchWeather, 600000); // Every 10 minutes
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.querySelector('.contact-form');
+    const heroImage = document.querySelector('.hero-image');
+    const contactCards = document.querySelectorAll('.contact-card');
+
+    // Form Submission Handler
+    function handleFormSubmission(event) {
+        event.preventDefault();
+        
+        // Basic validation
+        const nameInput = event.target.querySelector('input[placeholder="Your Name"]');
+        const emailInput = event.target.querySelector('input[placeholder="Your Email"]');
+        const messageInput = event.target.querySelector('textarea');
+
+        if (!nameInput.value || !emailInput.value || !messageInput.value) {
+            alert('Please fill in all fields');
+            return;
+        }
+
+        // Simulate form submission
+        alert('Message sent successfully! We will get back to you soon.');
+        event.target.reset();
+    }
+
+    // Parallax Hero Image Effect
+    function handleParallaxScroll() {
+        const scrollPosition = window.pageYOffset;
+        heroImage.style.transform = `translateY(${scrollPosition * 0.5}px)`;
+    }
+
+    // Contact Card Interactions
+    function initContactCardAnimations() {
+        contactCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'scale(1.02)';
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'scale(1)';
+            });
+        });
+    }
+
+    // Event Listeners
+    if (contactForm) {
+        contactForm.addEventListener('submit', handleFormSubmission);
+    }
+
+    window.addEventListener('scroll', handleParallaxScroll);
+
+    // Initialize Card Animations
+    initContactCardAnimations();
+
+    // Optional: Dynamic Last Modified Date
+    const lastModifiedSpan = document.getElementById('lastModified');
+    if (lastModifiedSpan) {
+        lastModifiedSpan.textContent = new Date(document.lastModified).toLocaleDateString();
+    }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Resource Card Interactions
+    const resourceCards = document.querySelectorAll('.resource-card');
+    
+    function initResourceCardAnimations() {
+        resourceCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
+            });
+        });
+    }
+
+    // Media Item Hover Effects
+    const mediaItems = document.querySelectorAll('.media-item');
+    
+    function initMediaItemAnimations() {
+        mediaItems.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.style.transform = 'translateX(10px)';
+                item.style.backgroundColor = '#e9ecef';
+            });
+
+            item.addEventListener('mouseleave', () => {
+                item.style.transform = 'translateX(0)';
+                item.style.backgroundColor = '#f8f9fa';
+            });
+        });
+    }
+
+    // Dynamic Content Loading Simulation
+    function simulateContentLoading() {
+        const timeline = document.querySelector('.media-timeline');
+        
+        // Simulated additional media items
+        const additionalItems = [
+            {
+                title: 'National Cybersecurity Workshop',
+                description: 'Experts discuss emerging digital threats and mitigation strategies'
+            },
+            {
+                title: 'Digital Innovation Summit',
+                description: 'Showcasing Zimbabwe\'s technological advancements'
+            }
+        ];
+
+        additionalItems.forEach(item => {
+            const mediaItem = document.createElement('div');
+            mediaItem.classList.add('media-item');
+            mediaItem.innerHTML = `
+                <h3>${item.title}</h3>
+                <p>${item.description}</p>
+            `;
+            timeline.appendChild(mediaItem);
+        });
+    }
+
+    // Last Modified Date
+    const lastModifiedSpan = document.getElementById('lastModified');
+    if (lastModifiedSpan) {
+        lastModifiedSpan.textContent = new Date(document.lastModified).toLocaleDateString();
+    }
+
+    // Initialize Animations and Simulations
+    initResourceCardAnimations();
+    initMediaItemAnimations();
+    simulateContentLoading();
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Current Date and Time Display
+    function updateDateTime() {
+        const currentDateTimeElement = document.getElementById('currentDateTime');
+        if (currentDateTimeElement) {
+            const now = new Date();
+            currentDateTimeElement.textContent = now.toLocaleString('en-ZW', {
+                dateStyle: 'full',
+                timeStyle: 'long'
+            });
+        }
+    }
+
+    // Last Modified Display
+    function updateLastModified() {
+        const lastModifiedElement = document.getElementById('lastModified');
+        if (lastModifiedElement) {
+            const lastModified = document.lastModified;
+            lastModifiedElement.textContent = lastModified;
+        }
+    }
+
+    // Simple Weather Information (Placeholder)
+    function updateWeatherInfo() {
+        const weatherInfoElement = document.getElementById('weatherInfo');
+        if (weatherInfoElement) {
+            // In a real scenario, this would be fetched from a weather API
+            weatherInfoElement.textContent = 'Harare: 25°C, Partly Cloudy';
+        }
+    }
+
+    // Mobile Menu Toggle
+    function setupMobileMenu() {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+        }
+    }
+
+    // Initialize Functions
+    updateDateTime();
+    updateLastModified();
+    updateWeatherInfo();
+    setupMobileMenu();
+
+    // Update date and time every second
+    setInterval(updateDateTime, 1000);
+});
