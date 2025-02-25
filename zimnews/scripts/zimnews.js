@@ -956,7 +956,7 @@ window.addEventListener('scroll', () => {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Media Database (mock data - replace with actual media paths)
     const mediaLibrary = {
         infrastructure: [
@@ -1001,7 +1001,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const currentMedia = categoryMedia[currentMediaIndex];
 
         modalTitle.textContent = `${currentCategory.charAt(0).toUpperCase() + currentCategory.slice(1)} Media`;
-        
+
         mediaContainer.innerHTML = '';
         const mediaElement = createMediaElement(currentMedia);
         mediaContainer.appendChild(mediaElement);
@@ -1037,7 +1037,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Event Listeners
     document.querySelectorAll('.view-media').forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             const category = this.getAttribute('data-category');
             openMediaModal(category);
         });
@@ -1063,83 +1063,83 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Close modal when clicking outside
-    window.addEventListener('click', function(event) {
+    window.addEventListener('click', function (event) {
         if (event.target === mediaModal) {
             mediaModal.style.display = 'none';
         }
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Comprehensive Media Library
     const mediaLibrary = {
         'press-releases': [
-            { 
-                type: 'document', 
-                src: 'documents/gov-announcement.pdf', 
+            {
+                type: 'document',
+                src: 'documents/gov-announcement.pdf',
                 title: 'Latest Government Announcement',
                 description: 'Comprehensive policy update document'
             },
-            { 
-                type: 'image', 
-                src: 'images/press-conference.jpg', 
+            {
+                type: 'image',
+                src: 'images/press-conference.jpg',
                 title: 'Press Conference Highlights',
                 description: 'Key moments from recent press briefing'
             }
         ],
         'multimedia': [
-            { 
-                type: 'video', 
-                src: 'videos/digital-strategy.mp4', 
+            {
+                type: 'video',
+                src: 'videos/digital-strategy.mp4',
                 title: 'Digital Transformation Roadmap',
                 description: 'Comprehensive overview of national digital initiatives'
             },
-            { 
-                type: 'image', 
-                src: 'images/infographic-digital-progress.png', 
+            {
+                type: 'image',
+                src: 'images/infographic-digital-progress.png',
                 title: 'Digital Progress Infographic',
                 description: 'Visual representation of digital transformation metrics'
             }
         ],
         'media-contacts': [
-            { 
-                type: 'document', 
-                src: 'documents/media-guidelines.pdf', 
+            {
+                type: 'document',
+                src: 'documents/media-guidelines.pdf',
                 title: 'Media Communication Guidelines',
                 description: 'Official communication protocols'
             },
-            { 
-                type: 'image', 
-                src: 'images/press-office.jpg', 
+            {
+                type: 'image',
+                src: 'images/press-office.jpg',
                 title: 'Press Office Contact Information',
                 description: 'Official media liaison details'
             }
         ],
         'events': {
             'digital-strategy': [
-                { 
-                    type: 'video', 
-                    src: 'videos/digital-strategy-launch.mp4', 
+                {
+                    type: 'video',
+                    src: 'videos/digital-strategy-launch.mp4',
                     title: 'Digital Strategy Launch Event',
                     description: 'Full event coverage and key highlights'
                 },
-                { 
-                    type: 'image', 
-                    src: 'images/strategy-launch-panel.jpg', 
+                {
+                    type: 'image',
+                    src: 'images/strategy-launch-panel.jpg',
                     title: 'Strategy Launch Panel',
                     description: 'Key government officials discussing digital transformation'
                 }
             ],
             'cybersecurity': [
-                { 
-                    type: 'video', 
-                    src: 'videos/cybersecurity-program.mp4', 
+                {
+                    type: 'video',
+                    src: 'videos/cybersecurity-program.mp4',
                     title: 'Cybersecurity Enhancement Program',
                     description: 'Detailed overview of national cybersecurity initiatives'
                 },
-                { 
-                    type: 'document', 
-                    src: 'documents/cybersecurity-report.pdf', 
+                {
+                    type: 'document',
+                    src: 'documents/cybersecurity-report.pdf',
                     title: 'Cybersecurity Strategy Report',
                     description: 'Comprehensive national cybersecurity strategy document'
                 }
@@ -1163,10 +1163,10 @@ document.addEventListener('DOMContentLoaded', function() {
     function openMediaModal(category) {
         currentMediaCategory = category;
         currentMediaIndex = 0;
-        
+
         // Determine media set based on category
         currentMediaSet = mediaLibrary[category] || [];
-        
+
         updateMediaContent();
         mediaModal.style.display = 'block';
     }
@@ -1177,21 +1177,21 @@ document.addEventListener('DOMContentLoaded', function() {
         wrapper.className = 'media-display-item';
 
         // Handle different media types
-        switch(mediaItem.type) {
+        switch (mediaItem.type) {
             case 'image':
                 const img = document.createElement('img');
                 img.src = mediaItem.src;
                 img.alt = mediaItem.title;
                 wrapper.appendChild(img);
                 break;
-            
+
             case 'video':
                 const video = document.createElement('video');
                 video.src = mediaItem.src;
                 video.controls = true;
                 wrapper.appendChild(video);
                 break;
-            
+
             case 'document':
                 const docLink = document.createElement('a');
                 docLink.href = mediaItem.src;
@@ -1211,7 +1211,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Update Media Content
     function updateMediaContent() {
         mediaContainer.innerHTML = '';
-        
+
         if (currentMediaSet.length > 0) {
             const currentMedia = currentMediaSet[currentMediaIndex];
             const mediaElement = createMediaElement(currentMedia);
@@ -1228,7 +1228,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Event Listeners
     document.querySelectorAll('.view-media').forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             const category = this.getAttribute('data-category');
             openMediaModal(category);
         });
@@ -1236,11 +1236,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Event Details Buttons
     document.querySelectorAll('.media-details-btn').forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             const eventCategory = this.getAttribute('data-event');
             currentMediaSet = mediaLibrary.events[eventCategory] || [];
             currentMediaIndex = 0;
-            
+
             updateMediaContent();
             mediaModal.style.display = 'block';
         });
@@ -1266,7 +1266,7 @@ document.addEventListener('DOMContentLoaded', function() {
         mediaModal.style.display = 'none';
     });
 
-    window.addEventListener('click', function(event) {
+    window.addEventListener('click', function (event) {
         if (event.target === mediaModal) {
             mediaModal.style.display = 'none';
         }
