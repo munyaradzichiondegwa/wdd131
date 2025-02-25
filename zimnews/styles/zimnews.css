@@ -226,9 +226,9 @@ body {
 }
 
 .submit-button:hover {
-    background-color: darken(yellow, 10%);
-}
-
+    background-color: #e6b800; /* This is a darker shade of yellow */
+  }
+  
 @media (max-width: 768px) {
     .project-grid, .resource-grid {
         grid-template-columns: 1fr;
