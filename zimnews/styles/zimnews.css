@@ -226,7 +226,7 @@ body {
 }
 
 .submit-button:hover {
-    background-color: darken(#28a745, 10%);
+    background-color: darken(yellow, 10%);
 }
 
 @media (max-width: 768px) {
