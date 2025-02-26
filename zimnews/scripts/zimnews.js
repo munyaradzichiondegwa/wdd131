@@ -965,15 +965,15 @@ document.addEventListener('DOMContentLoaded', function () {
         ],
         social: [
             { type: 'image', src: 'images/healthcare-initiative.jpg', caption: 'Community Healthcare Program' },
-            { type: 'video', src: 'videos/education-reform.mp4', caption: 'Education Reform Insights' }
+            { type: 'video', src: 'videos/veterans-welfare.mp4', caption: 'Ware Veterans Welfare' }
         ],
         economic: [
             { type: 'image', src: 'images/entrepreneurship-workshop.jpg', caption: 'Entrepreneurship Support Program' },
             { type: 'video', src: 'videos/job-creation.mp4', caption: 'Job Creation Initiatives' }
         ],
         environmental: [
-            { type: 'image', src: 'images/renewable-energy.jpg', caption: 'Renewable Energy Project' },
-            { type: 'video', src: 'videos/conservation-efforts.mp4', caption: 'Conservation Efforts' }
+            { type: 'image', src: 'images/conservation-efforts.jpg', caption: 'Conservation Efforts' },
+            { type: 'video', src: 'videos/renewable-energy.mp4', caption: 'Renewable Energy Projects' }
         ]
     };
 
