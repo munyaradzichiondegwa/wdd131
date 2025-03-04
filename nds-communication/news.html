@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - Zimbabwe Vision 2030</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/main.js"></script> 
+    <script src="scripts/server.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- Navigation from index.html -->
+        </nav>
+    </header>
+
+    <main class="news-page">
+        <section class="news-header">
+            <h1>Latest News and Updates</h1>
+            <div class="news-search">
+                <input type="text" placeholder="Search news..." aria-label="Search news">
+                <button>Search</button>
+            </div>
+        </section>
+
+        <section class="news-categories">
+            <h2>News Categories</h2>
+            <div class="category-buttons">
+                <button>Economy</button>
+                <button>Agriculture</button>
+                <button>Infrastructure</button>
+                <button>Social Development</button>
+            </div>
+        </section>
+
+        <section id="news-list">
+            <!-- News items will be dynamically populated by JavaScript -->
+        </section>
+
+        <section class="pagination">
+            <button>Previous</button>
+            <span>Page 1 of 5</span>
+            <button>Next</button>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Same footer as index.html -->
+        <div class="footer-content">
+        </div>
+        <p>&copy; 2025 Zimbabwe National Development Strategies. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="#" class="social-icon">Facebook</a>
+            <a href="#" class="social-icon">Twitter</a>
+            <a href="#" class="social-icon">Instagram</a>
+        </div>
+        <div id="weather-widget">
+            <p id="current-weather">Loading weather...</p>
+            <p id="current-time"></p>
+        </div>
+    </footer>
+</body>
+</html>
