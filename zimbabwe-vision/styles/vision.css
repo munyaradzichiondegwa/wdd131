@@ -1,0 +1,126 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(to right, #003366, #0072CE);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#hero-banner {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.slideshow img {
+    width: 100%;
+    display: none;
+    max-height: 400px;
+}
+
+.slideshow img:first-child {
+    display: block;
+}
+
+.cta {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background: #FFD700;
+    color: #003366;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#quick-links {
+    text-align: center;
+    background: #f9f9f9;
+    padding: 20px 10px;
+}
+
+#quick-links ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+#quick-links ul li {
+    margin: 0 10px;
+}
+
+#quick-links ul li a {
+    color: #0072CE;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#progress-map {
+    padding: 20px;
+    text-align: center;
+}
+
+#map {
+    height: 400px;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 800px;
+    border: 2px solid #003366;
+}
+
+footer {
+    background: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Section Headers */
+main h2 {
+    font-size: 1.5em;
+    color: #003366;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Lists */
+main ul {
+    list-style-type: square;
+    padding: 0 20px;
+}
+
+main ul li {
+    margin: 5px 0;
+}
+
+/* Navigation */
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #FFD700;
+}

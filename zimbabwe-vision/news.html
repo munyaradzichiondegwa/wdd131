@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Zimbabwe Vision 2030 Portal: A dynamic platform showcasing strategic milestones, progress trackers, and economic development initiatives toward an upper middle-income economy by 2030.">
+    <title>News</title>
+    <link rel="stylesheet" href="styles/vision.css">
+    <script src="scripts/vision.js"></script>
+
+</head>
+<body>
+    <header>
+        <h1>News and Updates</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="vision.html">Vision 2030 Overview</a></li>
+                <li><a href="economic-sectors.html">Economic Sectors</a></li>
+                <li><a href="projects.html">Government Projects</a></li>
+                <li><a href="news.html">News and Updates</a></li>
+                <li><a href="stakeholder.html">Stakeholder Engagement</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Latest News</h2>
+            <% news.forEach(article => { %>
+                <article>
+                    <h3><%= article.title %></h3>
+                    <p><%= article.content.substring(0, 100) %>... <a href="#">Read More</a></p>
+                    <p><strong>Date:</strong> <%= article.date_published %></p>
+                </article>
+            <% }) %>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 Zimbabwe Vision 2030 Portal</p>
+    </footer>
+</body>
+</html>
