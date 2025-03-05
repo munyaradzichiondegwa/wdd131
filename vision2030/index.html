@@ -4,19 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zimbabwe Vision 2030 - Towards an Upper Middle-Income Economy</title>
+    <!-- Stylesheets -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles/vision.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="scripts/vision.js"></script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="scripts/vision.js" defer></script>
 </head>
 <body>
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="logo.png" alt="Vision 2030 Logo" height="40">
+            <a class="navbar-brand" href="#" aria-label="Go to homepage">
+                Zimbabwe Vision 2030 Homepage
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <img src="logo.png" alt="Vision 2030 Logo" height="40">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -29,32 +33,8 @@
             </div>
         </div>
     </nav>
-<!-- Update navigation in all pages -->
-<ul class="navbar-nav ms-auto">
-    <li class="nav-item"><a class="nav-link" href="../pages/programs.html">Programs</a></li>
-    <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-            Sectors
-        </a>
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="../pages/agriculture.html">Agriculture</a></li>
-            <li><a class="dropdown-item" href="../pages/mining.html">Mining</a></li>
-            <li><a class="dropdown-item" href="../pages/tourism.html">Tourism</a></li>
-        </ul>
-    </li>
-    <li class="nav-item"><a class="nav-link" href="../pages/news.html">News</a></li>
-    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-</ul>
-<li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-        Ministries
-    </a>
-    <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="../pages/ministries/information.html">Information</a></li>
-        <li><a class="dropdown-item" href="../pages/ministries/finance.html">Finance</a></li>
-        <li><a class="dropdown-item" href="../pages/ministries/opc.html">OPC</a></li>
-    </ul>
-</li>
+
+    <!-- Hero Banner -->
     <header class="hero-banner d-flex align-items-center">
         <div class="container text-center">
             <h1 class="display-4 mb-4">Zimbabwe Vision 2030</h1>
@@ -63,6 +43,7 @@
         </div>
     </header>
 
+    <!-- Development Programs Section -->
     <section id="programs" class="py-5 bg-light">
         <div class="container">
             <h2 class="text-center mb-5">Development Programs</h2>
@@ -70,9 +51,9 @@
                 <div class="col-md-4">
                     <div class="program-card card h-100">
                         <div class="card-body">
-                            <span class="kpi-badge badge rounded-pill">TSP 2018-2020</span>
+                            <span class="kpi-badge badge bg-success rounded-pill">TSP 2018-2020</span>
                             <h3 class="card-title mt-3">Economic Stabilization</h3>
-                            <p class="card-text">Foundational reforms that stabilized our economy</p>
+                            <p class="card-text">Foundational reforms that stabilized our economy.</p>
                             <ul class="list-unstyled">
                                 <li><i class="fas fa-check text-success"></i> Inflation Reduced</li>
                                 <li><i class="fas fa-check text-success"></i> Infrastructure Rehabilitated</li>
@@ -80,27 +61,28 @@
                         </div>
                     </div>
                 </div>
-                <!-- Additional program cards -->
+                <!-- Additional program cards can be added here -->
             </div>
         </div>
     </section>
 
-    <!-- Economic Sectors -->
+    <!-- Key Economic Sectors Section -->
     <section id="sectors" class="py-5">
         <div class="container">
             <h2 class="text-center mb-5">Key Economic Sectors</h2>
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="sector-card" style="background-image: url('agriculture.jpg')">
-                        <div class="sector-overlay">
+                    <div class="sector-card agriculture-sector">
+                        <div class="sector-overlay text-center text-white">
                             <h3>Agriculture</h3>
-                            <p>Food security and modernization initiatives</p>
+                            <p>Food security and modernization initiatives.</p>
                         </div>
                     </div>
                 </div>
-                <!-- Additional sector cards -->
+                <!-- Additional sector cards can be added here -->
             </div>
         </div>
+        
     </section>
 
     <!-- News Section -->
@@ -108,7 +90,7 @@
         <div class="container">
             <h2 class="text-center mb-5">Latest Updates</h2>
             <div class="row g-4" id="news-grid">
-                <!-- News content loaded via JS -->
+                <!-- News content dynamically loaded via JS -->
             </div>
         </div>
     </section>
@@ -120,22 +102,27 @@
                 <div class="col-md-4">
                     <h5>Ministries</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-white">Information</a></li>
-                        <li><a href="#" class="text-white">Finance</a></li>
-                        <li><a href="#" class="text-white">OPC</a></li>
+                        <li><a href="../pages/ministries/information.html" class="text-white">Information</a></li>
+                        <li><a href="../pages/ministries/finance.html" class="text-white">Finance</a></li>
+                        <li><a href="../pages/ministries/opc.html" class="text-white">OPC</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
                     <h5>Social Media</h5>
                     <div class="social-icons">
-                        <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="text-white me-3" aria-label="Visit our Facebook page">
+                            <i class="fab fa-facebook"></i> Facebook
+                        </a>
+                        <a href="#" class="text-white me-3" aria-label="Visit our Twitter page">
+                            <i class="fab fa-twitter"></i> Twitter
+                        </a>
+                        <a href="#" class="text-white" aria-label="Visit our YouTube channel">
+                            <i class="fab fa-youtube"></i> YouTube
+                        </a>    
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-
 </body>
 </html>

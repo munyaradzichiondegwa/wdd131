@@ -6,12 +6,26 @@ const newsData = [
         category: "Policy",
         summary: "Government finalizes plans for NDS2 implementation"
     },
-    // Add more news items
+    {
+        title: "New Agricultural Reforms Announced",
+        date: "2024-04-10",
+        category: "Agriculture",
+        summary: "The government has implemented key reforms to boost sustainable farming."
+    }
+    // Add more news items as needed
 ];
+
+// Utility Function: Format Date
+function formatDate(dateString) {
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    const date = new Date(dateString);
+    return date.toLocaleDateString(undefined, options);
+}
 
 // News Loader Function
 function loadNews() {
     const newsGrid = document.getElementById('news-grid');
+    newsGrid.innerHTML = ''; // Clear any existing news items
     newsData.forEach(item => {
         newsGrid.innerHTML += `
             <div class="col-md-4">
@@ -20,7 +34,7 @@ function loadNews() {
                         <span class="badge bg-primary">${item.category}</span>
                         <h5 class="card-title mt-2">${item.title}</h5>
                         <p class="card-text">${item.summary}</p>
-                        <small class="text-muted">${item.date}</small>
+                        <small class="text-muted">${formatDate(item.date)}</small>
                     </div>
                 </div>
             </div>
@@ -28,48 +42,34 @@ function loadNews() {
     });
 }
 
-// Initialize on DOM Load
-document.addEventListener('DOMContentLoaded', () => {
-    loadNews();
-});
+// Get Current Date and Last Changed Element
+function updateLastChanged() {
+    const lastChangedElement = document.getElementById('last-changed');
+    const currentDate = new Date();
+    const formattedDate = currentDate.toLocaleDateString(undefined, {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+    });
+    lastChangedElement.textContent = `Last updated: ${formattedDate}`;
+}
+
+// Weather API Integration
+async function loadWeather(city = 'Harare') {
+    const weatherElement = document.getElementById('weather-info');
+    try {
+        const apiKey = 'YOUR_API_KEY_HERE'; // Replace with your weather API key
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`);
+        const data = await response.json();
+
+        weatherElement.textContent = `Weather in ${data.name}: ${data.weather[0].description}, ${data.main.temp}°C`;
+    } catch (error) {
+        weatherElement.textContent = 'Unable to load weather information.';
+        console.error('Weather API Error:', error);
+    }
+}
 
 // Hero Banner Carousel Logic
-let currentSlide = 0;
-const slides = document.querySelectorAll('.hero-slide');
-
-function cycleSlides() {
-    slides[currentSlide].classList.remove('active');
-    currentSlide = (currentSlide + 1) % slides.length;
-    slides[currentSlide].classList.add('active');
-}
-
-// Initialize Carousel
-if(slides.length > 0) {
-    setInterval(cycleSlides, 5000);
-}
-
-// Project Filtering
-document.querySelectorAll('.btn-filter').forEach(btn => {
-    btn.addEventListener('click', function() {
-        document.querySelectorAll('.btn-filter').forEach(b => b.classList.remove('active'));
-        this.classList.add('active');
-        const filter = this.textContent.toLowerCase();
-        filterProjects(filter);
-    });
-});
-
-function filterProjects(filter) {
-    document.querySelectorAll('.project-card').forEach(card => {
-        const shouldShow = filter === 'all' || card.classList.contains(filter);
-        card.style.display = shouldShow ? 'block' : 'none';
-    });
-}
-
-// News Search
-document.querySelector('.news-filters input').addEventListener('input', function(e) {
-    const searchTerm = e.target.value.toLowerCase();
-    document.querySelectorAll('.news-item').forEach(item => {
-        const text = item.textContent.toLowerCase();
-        item.style.display = text.includes(searchTerm) ? 'block' : 'none';
-    });
-});
+let currentSlide
