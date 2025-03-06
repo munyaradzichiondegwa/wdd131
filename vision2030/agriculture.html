@@ -1,109 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zimbabwe Vision 2030 - Towards an Upper Middle-Income Economy</title>
+    <meta name="description" content="Zimbabwe Vision 2030 Agricultural Development Strategy - Climate-smart farming, food security, and sustainable growth initiatives">
+    <title>Agricultural Development - Zimbabwe Vision 2030</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="styles/vision.css" as="style">
+    <link rel="preload" href="scripts/vision.js" as="script">
+    
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles/vision.css">
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JavaScript -->
-    <script src="scripts/vision.js"></script>
 </head>
-
 <body>
+    <!-- Skip Navigation -->
+    <a href="#main-content" class="visually-hidden-focusable">Skip to main content</a>
+
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Main navigation">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="logo.png" alt="Vision 2030 Logo" height="40"> Vision 2030 Home
+            <a class="navbar-brand" href="/">
+                <img src="logo.png" alt="Vision 2030 Logo" width="120" height="40" loading="lazy">
+                <span class="visually-hidden">Home</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#programs">Programs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#sectors">Sectors</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#news">News</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="programs.html">Programs</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" 
+                            aria-expanded="false" aria-haspopup="true">
+                            Sectors
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="agriculture.html">Agriculture</a></li>
+                            <li><a class="dropdown-item" href="mining.html">Mining</a></li>
+                            <li><a class="dropdown-item" href="tourism.html">Tourism</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero-banner d-flex align-items-center bg-primary text-white">
-        <div class="container text-center">
-            <h1 class="display-4 mb-4">Zimbabwe Vision 2030</h1>
-            <p class="lead">Towards an Upper Middle-Income Economy: Inclusive Growth, Innovation, and Resilience</p>
-            <a href="#programs" class="btn btn-lg btn-warning mt-3">Explore Our Journey</a>
+    <header class="hero-banner bg-primary text-white" role="banner" aria-labelledby="page-title">
+        <div class="container text-center py-5">
+            <h1 id="page-title" class="display-4 mb-4">Agricultural Development Strategy</h1>
+            <p class="lead mb-4">Sustainable Farming for Food Security & Economic Growth</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <a href="#initiatives" class="btn btn-lg btn-warning">View Initiatives</a>
+                <a href="#success-stories" class="btn btn-lg btn-outline-light">Success Stories</a>
+            </div>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main class="container py-5">
-        <h1 class="text-center mb-5">Agricultural Development</h1>
-        <div class="row">
-            <!-- Initiatives Section -->
-            <div class="col-md-8">
-                <section class="initiatives-section">
-                    <h2>Key Initiatives</h2>
-                    <div class="initiative-card">
-                        <h3>Climate-Smart Agriculture</h3>
-                        <p>NDS2 priority program for sustainable farming</p>
-                        <div class="progress">
-                            <div class="progress-bar progress-65" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">65% Complete</div>
+    <main id="main-content" class="container py-5">
+        <!-- Breadcrumb -->
+        <nav aria-label="Breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item"><a href="sectors.html">Sectors</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Agriculture</li>
+            </ol>
+        </nav>
 
+        <h2 class="visually-hidden">Agricultural Development Overview</h2>
+        
+        <!-- Key Stats -->
+        <section class="stats-grid mb-5" aria-labelledby="agriculture-stats">
+            <h3 id="agriculture-stats" class="text-center mb-4">Key Statistics</h3>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="stat-card bg-light p-4 text-center">
+                        <p class="stat-number display-6">65%</p>
+                        <p class="stat-label">Food Self-Sufficiency</p>
+                    </div>
+                </div>
+                <!-- Add more stat cards -->
+            </div>
+        </section>
+
+        <!-- Initiatives Section -->
+        <section id="initiatives" class="mb-5" aria-labelledby="initiatives-heading">
+            <h2 id="initiatives-heading" class="mb-4">Key Initiatives</h2>
+            <div class="row g-4">
+                <article class="col-md-6">
+                    <div class="initiative-card card h-100">
+                        <div class="card-body">
+                            <h3 class="h4 card-title">Climate-Smart Agriculture</h3>
+                            <p class="card-text">NDS2 priority program for sustainable farming practices</p>
+                            <div class="progress mb-3" role="progressbar" aria-valuenow="65" 
+                                aria-valuemin="0" aria-valuemax="100" aria-label="Implementation progress">
+                                <div class="progress-bar" style="width: 65%">65% Complete</div>
+                            </div>
+                            <a href="#" class="btn btn-primary">Learn More</a>
                         </div>
                     </div>
-                </section>
+                </article>
+                <!-- Add more initiative cards -->
             </div>
-            <!-- Success Stories Section -->
-            <div class="col-md-4">
-                <section class="success-stories">
-                    <h3>Success Stories</h3>
-                    <div class="story-card">
-                        <img src="images/farmer.jpg" alt="Successful farmer smiling in field">
-                        <h4>Irrigation Scheme Success</h4>
-                        <p>500% yield increase in Masvingo Province</p>
+        </section>
+
+        <!-- Success Stories -->
+        <section id="success-stories" class="mb-5" aria-labelledby="success-stories-heading">
+            <h2 id="success-stories-heading" class="mb-4">Success Stories</h2>
+            <div class="row g-4">
+                <article class="col-md-6 col-lg-4">
+                    <div class="story-card card h-100">
+                        <img src="images/farmer.webp" class="card-img-top" 
+                            alt="Farmer displaying harvested crops" 
+                            width="400" height="300" loading="lazy">
+                        <div class="card-body">
+                            <h3 class="h5 card-title">Irrigation Scheme Success</h3>
+                            <p class="card-text">500% yield increase in Masvingo Province through modern irrigation</p>
+                            <a href="#" class="btn btn-outline-primary">Read Full Story</a>
+                        </div>
                     </div>
-                </section>
+                </article>
+                <!-- Add more story cards -->
             </div>
-        </div>
+        </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
+    <footer class="bg-dark text-white py-5" aria-labelledby="footer-heading">
         <div class="container">
-            <div class="row">
-                <!-- Ministries Section -->
-                <div class="col-md-4">
-                    <h5>Ministries</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-white">Information</a></li>
-                        <li><a href="#" class="text-white">Finance</a></li>
-                        <li><a href="#" class="text-white">OPC</a></li>
-                    </ul>
+            <h2 id="footer-heading" class="visually-hidden">Footer Navigation</h2>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <section aria-labelledby="ministries-heading">
+                        <h3 id="ministries-heading" class="h5">Ministries</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="information.html" class="text-white">Ministry of Information</a></li>
+                            <li><a href="finance.html" class="text-white">Ministry of Finance</a></li>
+                            <li><a href="opc.html" class="text-white">Office of the President</a></li>
+                        </ul>
+                    </section>
                 </div>
-                <!-- Social Media Section -->
-                <div class="col-md-4">
-                    <h5>Social Media</h5>
-                    <div class="social-icons">
-                        <a href="#" class="text-white me-3" aria-label="Facebook"><i class="fab fa-facebook"></i> Facebook</a>
-                        <a href="#" class="text-white me-3" aria-label="Twitter"><i class="fab fa-twitter"></i> Twitter</a>
-                        <a href="#" class="text-white" aria-label="YouTube"><i class="fab fa-youtube"></i> YouTube</a>
-                    </div>
+                
+                <div class="col-lg-4">
+                    <section aria-labelledby="social-heading">
+                        <h3 id="social-heading" class="h5">Connect With Us</h3>
+                        <div class="social-icons">
+                            <a href="#" class="text-white me-3" aria-label="Facebook">
+                                <i class="fab fa-facebook" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" class="text-white me-3" aria-label="Twitter">
+                                <i class="fab fa-twitter" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" class="text-white" aria-label="YouTube">
+                                <i class="fab fa-youtube" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </section>
                 </div>
+                
+                <div class="col-lg-4">
+                    <section aria-labelledby="contact-heading">
+                        <h3 id="contact-heading" class="h5">Contact Information</h3>
+                        <address>
+                            <p class="mb-1">Ministry of Agriculture Development<br>
+                            123 Government Street<br>
+                            Harare, Zimbabwe</p>
+                            <p class="mb-1">
+                                <a href="tel:+263242123456" class="text-white">+263 242 123 456</a>
+                            </p>
+                            <p class="mb-0">
+                                <a href="mailto:agriculture@vision2030.gov.zw" class="text-white">
+                                    agriculture@vision2030.gov.zw
+                                </a>
+                            </p>
+                        </address>
+                    </section>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <p class="mb-0">&copy; 2024 Zimbabwe Vision 2030. All rights reserved.</p>
+                <p class="mb-0"><a href="privacy.html" class="text-white">Privacy Policy</a> | 
+                <a href="accessibility.html" class="text-white">Accessibility Statement</a></p>
             </div>
         </div>
     </footer>
-</body>
 
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
+        crossorigin="anonymous"></script>
+    <script src="scripts/vision.js" defer></script>
+</body>
 </html>

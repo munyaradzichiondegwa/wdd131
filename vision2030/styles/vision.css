@@ -186,3 +186,13 @@
     gap: 1.5rem;
 }
 
+:root {
+    --primary-color: #1a5f7a;
+    --secondary-color: #gold;
+    --text-color: #333;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
