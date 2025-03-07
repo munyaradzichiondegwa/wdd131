@@ -210,34 +210,188 @@
 
     <!-- Main Content -->
     <main class="container py-5">
-        <h1 class="text-center mb-5">Development Programs</h1>
-        
-        <!-- Example Program Section -->
-        <section class="program-section mb-5">
-            <div class="program-header bg-primary text-white p-4 rounded-top">
-                <h2>Transitional Stabilisation Programme (2018-2020)</h2>
-                <p class="lead">Economic Recovery Foundation</p>
+        <h1 class="text-center mb-5">National Development Programs</h1>
+    
+        <!-- Strategy Navigation -->
+        <nav class="mb-4">
+            <div class="nav nav-tabs" id="program-tabs" role="tablist">
+                <button class="nav-link active" id="tsp-tab" data-bs-toggle="tab" 
+                    data-bs-target="#tsp-content" type="button" role="tab"
+                    aria-controls="tsp-content" aria-selected="true">
+                    TSP (2018-2020)
+                </button>
+                <button class="nav-link" id="nds1-tab" data-bs-toggle="tab"
+                    data-bs-target="#nds1-content" type="button" role="tab"
+                    aria-controls="nds1-content" aria-selected="false">
+                    NDS1 (2021-2025)
+                </button>
+                <button class="nav-link" id="nds2-tab" data-bs-toggle="tab"
+                    data-bs-target="#nds2-content" type="button" role="tab"
+                    aria-controls="nds2-content" aria-selected="false">
+                    NDS2 (2026-2030)
+                </button>
             </div>
-            <div class="program-content border p-4 rounded-bottom">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h3>Key Achievements</h3>
-                        <ul>
-                            <li><i class="fas fa-check"></i> Reduced inflation from 800% to 50%</li>
-                            <li><i class="fas fa-check"></i> Rehabilitated 10,000km of roads</li>
-                        </ul>
+        </nav>
+    
+        <div class="tab-content" id="program-content">
+            <!-- TSP Content -->
+            <div class="tab-pane fade show active" id="tsp-content" role="tabpanel" aria-labelledby="tsp-tab">
+                <section class="program-section mb-5">
+                    <div class="program-header bg-primary text-white p-4 rounded-top">
+                        <h2>Transitional Stabilisation Programme</h2>
+                        <div class="progress mt-3">
+                            <div class="progress-bar bg-success" role="progressbar" 
+                                style="width: 100%" aria-valuenow="100" 
+                                aria-valuemin="0" aria-valuemax="100">
+                                Completed
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                        <h3>Resources</h3>
-                        <a href="#" class="d-block text-decoration-none">
-                            <i class="fas fa-file-pdf"></i> TSP Final Report
-                        </a>
+                    <div class="program-content border p-4 rounded-bottom">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <h3>Key Achievements</h3>
+                                <ul class="list-unstyled">
+                                    <li class="mb-3">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        Reduced inflation from 800% to 50%
+                                    </li>
+                                    <li class="mb-3">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        Rehabilitated 10,000km of road network
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h3>Strategic Documents</h3>
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <i class="fas fa-file-pdf me-2"></i>
+                                        TSP Final Implementation Report
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </section>
+            </div>
+    
+            <!-- NDS1 Content -->
+            <div class="tab-pane fade" id="nds1-content" role="tabpanel" aria-labelledby="nds1-tab">
+                <section class="program-section mb-5">
+                    <div class="program-header bg-warning text-dark p-4 rounded-top">
+                        <h2>National Development Strategy 1</h2>
+                        <div class="progress mt-3">
+                            <div class="progress-bar bg-warning" role="progressbar" 
+                                style="width: 75%" aria-valuenow="75" 
+                                aria-valuemin="0" aria-valuemax="100">
+                                75% Implemented
+                            </div>
+                        </div>
+                    </div>
+                    <div class="program-content border p-4 rounded-bottom">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <h3>Current Progress</h3>
+                                <ul class="list-unstyled">
+                                    <li class="mb-3">
+                                        <i class="fas fa-chart-line text-primary me-2"></i>
+                                        5.3% Average GDP Growth (2021-2023)
+                                    </li>
+                                    <li class="mb-3">
+                                        <i class="fas fa-industry text-primary me-2"></i>
+                                        40% Increase in Manufacturing Capacity
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h3>Key Resources</h3>
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <i class="fas fa-file-chart-line me-2"></i>
+                                        NDS1 Mid-Term Review
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+    
+            <!-- NDS2 Content -->
+            <div class="tab-pane fade" id="nds2-content" role="tabpanel" aria-labelledby="nds2-tab">
+                <section class="program-section mb-5">
+                    <div class="program-header bg-success text-white p-4 rounded-top">
+                        <h2>National Development Strategy 2</h2>
+                        <div class="progress mt-3">
+                            <div class="progress-bar bg-info" role="progressbar" 
+                                style="width: 15%" aria-valuenow="15" 
+                                aria-valuemin="0" aria-valuemax="100">
+                                Planning Phase
+                            </div>
+                        </div>
+                    </div>
+                    <div class="program-content border p-4 rounded-bottom">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <h3>Proposed Focus Areas</h3>
+                                <ul class="list-unstyled">
+                                    <li class="mb-3">
+                                        <i class="fas fa-brain text-info me-2"></i>
+                                        Artificial Intelligence Integration
+                                    </li>
+                                    <li class="mb-3">
+                                        <i class="fas fa-leaf text-info me-2"></i>
+                                        Green Economy Transition
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h3>Planning Documents</h3>
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <i class="fas fa-file-alt me-2"></i>
+                                        NDS2 Consultation Draft
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    
+        <!-- Strategy Comparison -->
+        <section class="mt-5" aria-labelledby="strategy-comparison">
+            <h2 id="strategy-comparison" class="mb-4">Program Evolution</h2>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">Focus Area</th>
+                            <th scope="col">TSP</th>
+                            <th scope="col">NDS1</th>
+                            <th scope="col">NDS2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Economic Focus</th>
+                            <td>Stabilization</td>
+                            <td>Growth</td>
+                            <td>Sustainability</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Key Metrics</th>
+                            <td>Inflation Control</td>
+                            <td>GDP Growth</td>
+                            <td>Green Index</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
     </main>
-
     <!-- Footer -->
     <footer class="bg-dark text-white py-4">
         <div class="container">

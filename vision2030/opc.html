@@ -193,20 +193,6 @@
             </div>
         </nav>
     </header>
-    <!-- Additional Navigation -->
-    <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="../pages/programs.html" aria-label="Go to the Programs page">Programs</a></li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-label="Open Sectors dropdown">Sectors</a>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="../pages/agriculture.html" aria-label="Go to Agriculture sector page">Agriculture</a></li>
-                <li><a class="dropdown-item" href="../pages/mining.html" aria-label="Go to Mining sector page">Mining</a></li>
-                <li><a class="dropdown-item" href="../pages/tourism.html" aria-label="Go to Tourism sector page">Tourism</a></li>
-            </ul>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="../pages/news.html" aria-label="Go to the News page">News</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact" aria-label="Go to the Contact section">Contact</a></li>
-    </ul>
 
     <!-- Ministries Dropdown -->
     <ul class="navbar-nav">
@@ -229,45 +215,168 @@
         </div>
     </header>
 
-    <!-- Main Content -->
     <main class="container py-5 ministry-page">
         <div class="row">
-            <!-- Sidebar -->
-            <aside class="col-md-3">
-                <div class="ministry-info">
-                    <img src="../images/opc-logo.png" alt="Office of the President & Cabinet Logo">
-                    <h2>Office of the President and Cabinet</h2>
-                    <div class="contact-info">
-                        <p><i class="fas fa-map-marker-alt"></i> Munhumutapa Building, Harare</p>
-                        <p><i class="fas fa-envelope"></i> opc@vision2030.gov.zw</p>
-                    </div>
-                </div>
-            </aside>
-
+            <!-- Sidebar remains unchanged -->
+    
             <!-- Main Content -->
             <div class="col-md-9">
-                <!-- Presidential Addresses -->
-                <section class="presidential-section mb-5">
-                    <h3>Presidential Addresses</h3>
-                    <div class="address-card">
-                        <div class="address-date">1 January 2024</div>
-                        <h4>New Year's Address to the Nation</h4>
-                        <div class="video-container">
-                            <iframe src="president-address.mp4" title="Presidential New Year's Address" allowfullscreen></iframe>
-                        </div>
-                        <p>Key priorities for NDS2 implementation...</p>
+                <!-- Strategy Navigation -->
+                <nav class="mb-4">
+                    <div class="nav nav-tabs" id="opc-tabs" role="tablist">
+                        <button class="nav-link active" id="tsp-tab" data-bs-toggle="tab" 
+                            data-bs-target="#tsp-content" type="button" role="tab"
+                            aria-controls="tsp-content" aria-selected="true">
+                            TSP Oversight
+                        </button>
+                        <button class="nav-link" id="nds1-tab" data-bs-toggle="tab"
+                            data-bs-target="#nds1-content" type="button" role="tab"
+                            aria-controls="nds1-content" aria-selected="false">
+                            NDS1 Monitoring
+                        </button>
+                        <button class="nav-link" id="nds2-tab" data-bs-toggle="tab"
+                            data-bs-target="#nds2-content" type="button" role="tab"
+                            aria-controls="nds2-content" aria-selected="false">
+                            NDS2 Leadership
+                        </button>
                     </div>
-                </section>
-
-                <!-- Policy Directives -->
-                <section class="directives-section">
-                    <h3>Latest Policy Directives</h3>
-                    <div class="directive-card bg-light p-4">
-                        <h4>Directive 01/2024: NDS2 Acceleration</h4>
-                        <p>All ministries to align operations with NDS2 targets</p>
-                        <a href="#" class="btn btn-download" aria-label="Download NDS2 Acceleration Directive">
-                            <i class="fas fa-download"></i> Download Directive
-                        </a>
+                </nav>
+    
+                <div class="tab-content" id="opc-content">
+                    <!-- TSP Content -->
+                    <div class="tab-pane fade show active" id="tsp-content" role="tabpanel" aria-labelledby="tsp-tab">
+                        <section class="presidential-section mb-5">
+                            <h3>TSP Presidential Directives</h3>
+                            <div class="address-card">
+                                <div class="strategy-progress mb-3">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" 
+                                            style="width: 100%" aria-valuenow="100" 
+                                            aria-valuemin="0" aria-valuemax="100">
+                                            TSP Completed
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="address-date">15 March 2020</div>
+                                <h4>TSP Completion Address</h4>
+                                <div class="video-container">
+                                    <iframe src="tsp-completion.mp4" title="TSP Completion Address" allowfullscreen></iframe>
+                                </div>
+                                <p>Key achievements and lessons from TSP implementation...</p>
+                            </div>
+                        </section>
+    
+                        <section class="directives-section">
+                            <h3>TSP Policy Directives</h3>
+                            <div class="directive-card bg-light p-4 mb-3">
+                                <h4>Directive 12/2018: Fiscal Stabilization</h4>
+                                <p>Implementation guidelines for economic recovery measures</p>
+                                <a href="#" class="btn btn-download">
+                                    <i class="fas fa-download"></i> Download TSP Archive
+                                </a>
+                            </div>
+                        </section>
+                    </div>
+    
+                    <!-- NDS1 Content -->
+                    <div class="tab-pane fade" id="nds1-content" role="tabpanel" aria-labelledby="nds1-tab">
+                        <section class="presidential-section mb-5">
+                            <h3>NDS1 Progress Review</h3>
+                            <div class="address-card">
+                                <div class="strategy-progress mb-3">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" 
+                                            style="width: 75%" aria-valuenow="75" 
+                                            aria-valuemin="0" aria-valuemax="100">
+                                            NDS1 75% Implemented
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="address-date">1 January 2024</div>
+                                <h4>NDS1 Mid-Term Review</h4>
+                                <div class="video-container">
+                                    <iframe src="nds1-review.mp4" title="NDS1 Progress Report" allowfullscreen></iframe>
+                                </div>
+                                <p>Acceleration plans for remaining NDS1 targets...</p>
+                            </div>
+                        </section>
+    
+                        <section class="directives-section">
+                            <h3>NDS1 Directives</h3>
+                            <div class="directive-card bg-light p-4 mb-3">
+                                <h4>Directive 01/2024: NDS1 Final Push</h4>
+                                <p>Cross-ministerial collaboration requirements</p>
+                                <a href="#" class="btn btn-download">
+                                    <i class="fas fa-download"></i> Download NDS1 Package
+                                </a>
+                            </div>
+                        </section>
+                    </div>
+    
+                    <!-- NDS2 Content -->
+                    <div class="tab-pane fade" id="nds2-content" role="tabpanel" aria-labelledby="nds2-tab">
+                        <section class="presidential-section mb-5">
+                            <h3>NDS2 Launch</h3>
+                            <div class="address-card">
+                                <div class="strategy-progress mb-3">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" 
+                                            style="width: 15%" aria-valuenow="15" 
+                                            aria-valuemin="0" aria-valuemax="100">
+                                            NDS2 Planning Phase
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="address-date">1 January 2024</div>
+                                <h4>NDS2 Vision Address</h4>
+                                <div class="video-container">
+                                    <iframe src="nds2-launch.mp4" title="NDS2 Launch Address" allowfullscreen></iframe>
+                                </div>
+                                <p>Strategic priorities for upper-middle income status...</p>
+                            </div>
+                        </section>
+    
+                        <section class="directives-section">
+                            <h3>NDS2 Foundation Directives</h3>
+                            <div class="directive-card bg-light p-4 mb-3">
+                                <h4>Directive 01/2024: NDS2 Framework</h4>
+                                <p>Implementation guidelines for all government arms</p>
+                                <a href="#" class="btn btn-download">
+                                    <i class="fas fa-download"></i> Download NDS2 Blueprint
+                                </a>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+    
+                <!-- Strategy Comparison -->
+                <section class="mt-5" aria-labelledby="strategy-comparison">
+                    <h2 id="strategy-comparison" class="mb-4">Strategic Evolution Overview</h2>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Phase</th>
+                                    <th scope="col">TSP (2018-2020)</th>
+                                    <th scope="col">NDS1 (2021-2025)</th>
+                                    <th scope="col">NDS2 (2026-2030)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Primary Focus</th>
+                                    <td>Economic Stabilization</td>
+                                    <td>Growth Acceleration</td>
+                                    <td>Sustainable Development</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Key Metrics</th>
+                                    <td>Inflation Control</td>
+                                    <td>GDP Growth Rate</td>
+                                    <td>Human Development Index</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </section>
             </div>

@@ -205,57 +205,183 @@
 
     <!-- Main Content -->
     <main class="container py-5">
-        <h1 class="text-center mb-5">Tourism and Hospitality</h1>
-
-        <section class="featured-destinations mb-5">
-            <h2>World Heritage Sites</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="destination-card">
-                        <img src="../images/vic-falls.jpg" alt="Scenic view of Victoria Falls" class="img-fluid">
-                        <div class="destination-info">
-                            <h3>Victoria Falls</h3>
-                            <p>New airport expansion completed under NDS1</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Additional destinations -->
+        <h1 class="text-center mb-5">Tourism Sector Development</h1>
+    
+        <!-- Strategy Navigation -->
+        <nav class="mb-4">
+            <div class="nav nav-tabs" id="tourism-tabs" role="tablist">
+                <button class="nav-link active" id="tsp-tab" data-bs-toggle="tab" 
+                    data-bs-target="#tsp-content" type="button" role="tab"
+                    aria-controls="tsp-content" aria-selected="true">
+                    TSP Achievements
+                </button>
+                <button class="nav-link" id="nds1-tab" data-bs-toggle="tab"
+                    data-bs-target="#nds1-content" type="button" role="tab"
+                    aria-controls="nds1-content" aria-selected="false">
+                    NDS1 Progress
+                </button>
+                <button class="nav-link" id="nds2-tab" data-bs-toggle="tab"
+                    data-bs-target="#nds2-content" type="button" role="tab"
+                    aria-controls="nds2-content" aria-selected="false">
+                    NDS2 Vision
+                </button>
             </div>
-        </section>
-
-        <div class="row">
-            <!-- Initiatives Section -->
-            <div class="col-md-6">
-                <section class="tourism-initiatives">
-                    <h2>Development Programs</h2>
-                    <div class="initiative-card bg-light p-4 mb-4">
-                        <h3>Hotel Infrastructure</h3>
-                        <p>5-star hotel projects in major tourist zones</p>
-                        <div class="progress">
-                            <div class="progress-bar progress-55" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">55% Complete</div>
+        </nav>
+    
+        <div class="tab-content" id="tourism-content">
+            <!-- TSP Content -->
+            <div class="tab-pane fade show active" id="tsp-content" role="tabpanel" aria-labelledby="tsp-tab">
+                <section class="featured-destinations mb-5">
+                    <h2 class="mb-4">TSP Infrastructure Projects</h2>
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card h-100">
+                                <img src="../images/airport-upgrade.jpg" alt="Airport renovation" class="card-img-top">
+                                <div class="card-body">
+                                    <h3>Airport Modernization</h3>
+                                    <div class="progress mt-3">
+                                        <div class="progress-bar bg-success" role="progressbar" 
+                                            style="width: 100%" aria-valuenow="100" 
+                                            aria-valuemin="0" aria-valuemax="100">
+                                            Completed
+                                        </div>
+                                    </div>
+                                    <p class="mt-2">3 International airports upgraded</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
             </div>
-
-            <!-- Events Section -->
-            <div class="col-md-6">
-                <section class="events-calendar">
-                    <h3>Upcoming Events</h3>
-                    <div class="event-card">
-                        <div class="event-date bg-primary text-white">
-                            <div class="day">15</div>
-                            <div class="month">OCT</div>
-                        </div>
-                        <div class="event-details">
-                            <h4>Victoria Falls Carnival</h4>
-                            <p>Annual international tourism festival</p>
+    
+            <!-- NDS1 Content -->
+            <div class="tab-pane fade" id="nds1-content" role="tabpanel" aria-labelledby="nds1-tab">
+                <section class="featured-destinations mb-5">
+                    <h2 class="mb-4">NDS1 Development Programs</h2>
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card h-100">
+                                <img src="../images/vic-falls.jpg" alt="Victoria Falls" class="card-img-top">
+                                <div class="card-body">
+                                    <h3>Victoria Falls Expansion</h3>
+                                    <div class="progress mt-3">
+                                        <div class="progress-bar" role="progressbar" 
+                                            style="width: 85%" aria-valuenow="85" 
+                                            aria-valuemin="0" aria-valuemax="100">
+                                            85% Complete
+                                        </div>
+                                    </div>
+                                    <p class="mt-2">New international conference center</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <!-- Additional events -->
+                </section>
+    
+                <div class="row">
+                    <div class="col-md-6">
+                        <section class="tourism-initiatives">
+                            <h3>Current Initiatives</h3>
+                            <div class="card bg-light p-4 mb-4">
+                                <h4>Hotel Infrastructure</h4>
+                                <p>12 new 5-star hotels under construction</p>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" 
+                                        style="width: 55%" aria-valuenow="55" 
+                                        aria-valuemin="0" aria-valuemax="100">
+                                        55% Complete
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- NDS2 Content -->
+            <div class="tab-pane fade" id="nds2-content" role="tabpanel" aria-labelledby="nds2-tab">
+                <section class="featured-destinations mb-5">
+                    <h2 class="mb-4">NDS2 Future Vision</h2>
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card h-100">
+                                <img src="../images/eco-resort.jpg" alt="Eco resort concept" class="card-img-top">
+                                <div class="card-body">
+                                    <h3>Sustainable Tourism</h3>
+                                    <div class="progress mt-3">
+                                        <div class="progress-bar bg-info" role="progressbar" 
+                                            style="width: 20%" aria-valuenow="20" 
+                                            aria-valuemin="0" aria-valuemax="100">
+                                            Planning Phase
+                                        </div>
+                                    </div>
+                                    <p class="mt-2">20 Eco-friendly resorts planned</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </div>
         </div>
+    
+        <!-- Strategy Comparison -->
+        <section class="mt-5" aria-labelledby="strategy-comparison">
+            <h2 id="strategy-comparison" class="mb-4">Tourism Strategy Evolution</h2>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Focus Area</th>
+                            <th scope="col">TSP (2018-2020)</th>
+                            <th scope="col">NDS1 (2021-2025)</th>
+                            <th scope="col">NDS2 (2026-2030)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Infrastructure</th>
+                            <td>Basic upgrades</td>
+                            <td>World-class facilities</td>
+                            <td>Smart destinations</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Visitor Numbers</th>
+                            <td>2M annual</td>
+                            <td>5M target</td>
+                            <td>10M target</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    
+        <!-- Events Section -->
+        <section class="events-calendar mt-5">
+            <h3>Strategic Events</h3>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card event-card">
+                        <div class="card-header bg-primary text-white d-flex justify-content-between">
+                            <div>
+                                <div class="event-date">15 OCT</div>
+                                <h4 class="mb-0">Victoria Falls Carnival</h4>
+                            </div>
+                            <span class="badge bg-nds1">NDS1</span>
+                        </div>
+                        <div class="card-body">
+                            <p>Annual international tourism festival</p>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" 
+                                    style="width: 90%" aria-valuenow="90" 
+                                    aria-valuemin="0" aria-valuemax="100">
+                                    90% Prepared
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
