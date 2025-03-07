@@ -1,187 +1,123 @@
-/* styles/vision.css */
-:root {
-    --primary-green: #009739;
-    --secondary-yellow: #FCD116;
-    --accent-red: #DE3831;
-    --dark-black: #000000;
-    --light-white: #FFFFFF;
-    --text-dark: #2C2C2C;
-    --bg-light: #F8F9FA;
-  }
-  
-  /* Enhanced Hero Section Styles */
-.hero-banner {
-    position: relative;
-    min-height: 70vh;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-  }
-  
-  .hero-image-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-  }
-  
-  .hero-image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-  
-  .hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      45deg, 
-      rgba(0, 151, 57, 0.9) 0%, /* Zimbabwe Green with 90% opacity */
-      rgba(0, 151, 57, 0.7) 100%
-    );
-    z-index: 2;
-  }
-  
-  .hero-content {
-    position: relative;
-    z-index: 3;
-    color: var(--light-white);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 768px) {
-    .hero-banner {
-      min-height: 50vh;
-    }
-    
-    .hero-content .display-4 {
-      font-size: 2.5rem;
-    }
-    
-    .hero-content .lead {
-      font-size: 1.25rem;
-    }
-  }
-  
-  /* Add to existing CSS */
-.btn-involved {
-  background-color: var(--accent-red) !important;
-  border-color: var(--accent-red) !important;
-  color: var(--light-white) !important;
+/* Strategy Tabs */
+.strategy-tabs {
+  border-bottom: 3px solid var(--primary-green);
+}
+
+.nav-tabs .nav-link {
+  font-weight: 600;
+  color: var(--dark-gray);
+  border: none;
+  position: relative;
   transition: all 0.3s ease;
 }
 
-.btn-involved:hover {
-  background-color: #c5302a !important;
-  border-color: #c5302a !important;
-  transform: translateY(-2px);
+.nav-tabs .nav-link.active {
+  color: var(--primary-green);
+  background: transparent;
 }
 
-.btn-involved:active {
-  background-color: #ad2823 !important;
-  border-color: #ad2823 !important;
+.nav-tabs .nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--primary-green);
+  animation: tabUnderline 0.3s ease;
 }
 
-  /* Weather Widget Styles */
-  .weather-widget {
-    background: rgba(252, 209, 22, 0.1);
-    border-radius: 8px;
-    padding: 1rem;
-    margin-top: 1rem;
+@keyframes tabUnderline {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+/* Progress Bars */
+.progress {
+  height: 1.5rem;
+  border-radius: 10px;
+  background-color: var(--light-gray);
+  overflow: visible;
+}
+
+.progress-bar {
+  background-color: var(--primary-green);
+  position: relative;
+  overflow: visible;
+  transition: width 1s ease-in-out;
+}
+
+.progress-bar::after {
+  content: attr(aria-valuenow)"%";
+  position: absolute;
+  right: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--dark-gray);
+  font-weight: 600;
+}
+
+/* Strategy Comparison Table */
+.strategy-table th {
+  background-color: var(--primary-green);
+  color: white;
+}
+
+.strategy-table td {
+  vertical-align: middle;
+}
+
+.strategy-table tr:nth-child(even) {
+  background-color: rgba(0, 107, 63, 0.05);
+}
+
+/* Card Enhancements */
+.initiative-card {
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.initiative-card:hover {
+  border-color: var(--primary-green);
+  transform: translateY(-5px);
+}
+
+.card-img-overlay {
+  background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.8));
+}
+
+/* KPI Badges */
+.kpi-badge {
+  background: var(--accent-gold);
+  color: var(--primary-green);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  display: inline-block;
+  font-weight: 700;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+  .table-responsive {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
   }
   
-  .weather-widget i {
-    margin-right: 0.5rem;
+  .strategy-table {
+      min-width: 600px;
   }
-  
-  /* Base Styles */
-  body {
-    color: var(--text-dark);
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-  }
-  
-  /* National Color Scheme */
-  .bg-primary { background-color: var(--primary-green) !important; }
-  .text-primary { color: var(--primary-green) !important; }
-  .bg-secondary { background-color: var(--secondary-yellow) !important; }
-  .text-secondary { color: var(--secondary-yellow) !important; }
-  .bg-accent { background-color: var(--accent-red) !important; }
-  .text-accent { color: var(--accent-red) !important; }
-  
-  /* Navigation */
-  .navbar {
-    border-bottom: 3px solid var(--secondary-yellow);
-  }
-  .nav-link:hover {
-    color: var(--secondary-yellow) !important;
-  }
-  
-  /* Hero Section */
-  .hero-banner {
-    min-height: 60vh;
-    position: relative;
-  }
-  .hero-overlay {
-    background: linear-gradient(rgba(0, 151, 57, 0.8), rgba(0, 151, 57, 0.9));
-  }
-  
-  /* Cards */
-  .card {
-    transition: transform 0.3s ease;
-    border: 1px solid var(--primary-green);
-  }
-  .card:hover {
-    transform: translateY(-5px);
-  }
-  .card-title {
-    color: var(--primary-green);
-  }
-  
-  /* Progress Bars */
-  .progress-bar {
-    background-color: var(--primary-green);
-  }
-  
-  /* Footer */
-  footer {
-    background: var(--dark-black);
-    border-top: 3px solid var(--secondary-yellow);
-  }
-  .weather-widget {
-    background: rgba(252, 209, 22, 0.1);
-    padding: 1rem;
-    border-radius: 8px;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .hero-banner {
-      min-height: 50vh;
-    }
-    .display-4 {
-      font-size: 2.5rem;
-    }
-  }
-  
-  /* Dynamic Content Areas */
-  .dynamic-content {
-    position: relative;
-    min-height: 200px;
-  }
-  .loading-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.9);
-    display: none;
-  }
+}
+
+/* Animation Classes */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
