@@ -1,0 +1,122 @@
+/* Strategy Tabs */
+.strategy-tabs {
+    border-bottom: 3px solid var(--primary-green);
+}
+
+.nav-tabs .nav-link {
+    font-weight: 600;
+    color: var(--dark-gray);
+    border: none;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--primary-green);
+    background: transparent;
+}
+
+.nav-tabs .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--primary-green);
+    animation: tabUnderline 0.3s ease;
+}
+
+@keyframes tabUnderline {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+}
+
+/* Progress Bars */
+.progress {
+    height: 1.5rem;
+    border-radius: 10px;
+    background-color: var(--light-gray);
+    overflow: visible;
+}
+
+.progress-bar {
+    background-color: var(--primary-green);
+    position: relative;
+    overflow: visible;
+    transition: width 1s ease-in-out;
+}
+
+.progress-bar::after {
+    content: attr(aria-valuenow)"%";
+    position: absolute;
+    right: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--dark-gray);
+    font-weight: 600;
+}
+
+/* Strategy Comparison Table */
+.strategy-table th {
+    background-color: var(--primary-green);
+    color: white;
+}
+
+.strategy-table td {
+    vertical-align: middle;
+}
+
+.strategy-table tr:nth-child(even) {
+    background-color: rgba(0, 107, 63, 0.05);
+}
+
+/* Card Enhancements */
+.initiative-card {
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.initiative-card:hover {
+    border-color: var(--primary-green);
+    transform: translateY(-5px);
+}
+
+.card-img-overlay {
+    background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.8));
+}
+
+/* KPI Badges */
+.kpi-badge {
+    background: var(--accent-gold);
+    color: var(--primary-green);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    display: inline-block;
+    font-weight: 700;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+    .table-responsive {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .strategy-table {
+        min-width: 600px;
+    }
+}
+
+/* Animation Classes */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
