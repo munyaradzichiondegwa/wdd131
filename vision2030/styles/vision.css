@@ -7,6 +7,43 @@
     --hover-highlight: rgba(0, 107, 63, 0.7);
 }
 
+.hero-banner {
+    min-height: 100vh;
+    position: relative;
+    color: white;
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-image-container img {
+    filter: brightness(0.7);
+}
+
+.hero-stats .hero-stat-card {
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease;
+}
+
+.hero-stats .hero-stat-card:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .hero-banner {
+        min-height: 80vh;
+    }
+    
+    .hero-stats {
+        margin-top: 2rem !important;
+    }
+    
+    .hero-stats .row {
+        flex-direction: column;
+    }
+}
+
 /* Hero Section */
 .hero-banner {
     height: 80vh; /* Increased height for a more immersive effect */

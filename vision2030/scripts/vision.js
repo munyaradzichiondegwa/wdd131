@@ -251,3 +251,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const heroBannerCarousel = new HeroBannerCarousel('.hero-slide');
     heroBannerCarousel.init();
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const counters = document.querySelectorAll('.counter');
+    
+    counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        const duration = 2000; // Animation duration in milliseconds
+        
+        const updateCounter = () => {
+            const count = +counter.innerText;
+            const increment = target / duration * 50;
+            
+            if (count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(updateCounter, 50);
+            } else {
+                counter.innerText = target;
+            }
+        };
+        
+        updateCounter();
+    });
+});
