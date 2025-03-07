@@ -218,9 +218,9 @@
                 <a href="#programs" class="btn btn-warning btn-lg px-5">
                     Explore Our Journey
                 </a>
-                <a href="#contact" class="btn btn-outline-light btn-lg px-5">
-                    Get Involved
-                </a>
+                <a href="#contact" class="btn btn-involved btn-lg px-5">
+                    <i class="fas fa-hands-helping me-2"></i>Get Involved
+                  </a>
             </div>
         </div>
     </header>
@@ -242,6 +242,35 @@
                 </select>  
             </div>
         </div>
+
+        <!-- News Modal -->
+<div class="modal fade" id="newsModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Category Filters -->
+<div class="category-filter btn-group mb-3">
+    <button class="btn btn-outline-primary active" data-category="all">All</button>
+    <button class="btn btn-outline-primary" data-category="policy">Policy</button>
+    <button class="btn btn-outline-primary" data-category="announcement">Announcement</button>
+</div>
+
+<!-- News Search -->
+<div class="news-filters mb-3">
+    <input 
+        type="text" 
+        class="form-control" 
+        placeholder="Search news..."
+    >
+</div>
         <!-- News Archive -->
         <div class="news-archive">
             <article class="news-item">

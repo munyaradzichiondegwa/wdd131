@@ -1,384 +1,187 @@
+/* styles/vision.css */
 :root {
-    --primary-green: #006b3f;
-    --accent-gold: #ffd700;
-    --secondary-blue: #005c8a;
-    --light-gray: #f8f9fa;
-    --dark-gray: #343a40;
-    --hover-highlight: rgba(0, 107, 63, 0.7);
-}
-
+    --primary-green: #009739;
+    --secondary-yellow: #FCD116;
+    --accent-red: #DE3831;
+    --dark-black: #000000;
+    --light-white: #FFFFFF;
+    --text-dark: #2C2C2C;
+    --bg-light: #F8F9FA;
+  }
+  
+  /* Enhanced Hero Section Styles */
 .hero-banner {
-    min-height: 100vh;
     position: relative;
-    color: white;
-}
-
-.text-shadow {
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-}
-
-.hero-image-container img {
-    filter: brightness(0.7);
-}
-
-.hero-stats .hero-stat-card {
-    backdrop-filter: blur(5px);
-    transition: transform 0.3s ease;
-}
-
-.hero-stats .hero-stat-card:hover {
-    transform: scale(1.05);
-}
-
-@media (max-width: 768px) {
-    .hero-banner {
-        min-height: 80vh;
-    }
-    
-    .hero-stats {
-        margin-top: 2rem !important;
-    }
-    
-    .hero-stats .row {
-        flex-direction: column;
-    }
-}
-
-/* Hero Section */
-.hero-banner {
-    height: 80vh; /* Increased height for a more immersive effect */
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('govt-building.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
+    min-height: 70vh;
+    overflow: hidden;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.hero-banner h1 {
-    font-size: 3.5rem;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
-.hero-banner p {
-    font-size: 1.5rem;
-}
-
-.hero-banner a.btn-warning {
-    font-size: 1.2rem;
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-}
-
-.hero-banner a.btn-warning:hover {
-    background-color: var(--accent-gold);
-    color: var(--primary-green);
-    transform: scale(1.05);
-}
-
-/* Program Cards */
-.program-card {
-    border-left: 6px solid var(--primary-green); /* Thicker border for emphasis */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.program-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Sector Cards */
-.sector-card {
-    height: 350px; /* Increased height for prominence */
-    background-size: cover;
-    background-position: center;
-    border-radius: 15px;
-    overflow: hidden;
-    position: relative;
-}
-
-.sector-overlay {
-    position: absolute;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 1.5rem;
-    width: 100%;
-    transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.sector-card:hover .sector-overlay {
-    background: var(--hover-highlight);
-    transform: translateY(-10px);
-}
-
-/* KPI Badges */
-.kpi-badge {
-    background: var(--accent-gold);
-    color: var(--primary-green);
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .hero-banner {
-        height: 60vh;
-    }
-
-    .hero-banner h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-banner p {
-        font-size: 1.2rem;
-    }
-
-    .sector-card {
-        height: 250px;
-    }
-}
-
-/* Tourism Destination Cards */
-.destination-card {
-    position: relative;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.destination-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.destination-info {
-    position: absolute;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 1.5rem;
-    width: 100%;
-    text-align: center;
-}
-
-/* Progress Bars */
-.progress-bar {
-    background-color: var(--primary-green);
-    color: white;
-    text-align: center;
-    padding: 5px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: width 0.4s ease;
-}
-
-.progress-bar:hover {
-    background-color: var(--accent-gold);
-    color: var(--primary-green);
-}
-
-/* Events Section */
-.event-card {
-    display: flex;
-    gap: 1rem;
-    padding: 1.5rem;
-    border: 1px solid #dee2e6;
-    border-radius: 12px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    background-color: #fff;
-}
-
-.event-card:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    transform: translateY(-5px);
-}
-
-.event-date {
-    text-align: center;
-    padding: 1rem;
-    border-radius: 8px;
-    background-color: var(--primary-green);
-    color: white;
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-/* Dynamic Elements */
-.resource-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1.5rem;
-}
-
-:root {
-    --primary-color: #1a5f7a;
-    --secondary-color: #gold;
-    --text-color: #333;
-}
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
-}
-
-/* Strategy Tabs */
-.strategy-tabs {
-    border-bottom: 3px solid var(--primary-green);
-}
-
-.nav-tabs .nav-link {
-    font-weight: 600;
-    color: var(--dark-gray);
-    border: none;
-    position: relative;
-    transition: all 0.3s ease;
-}
-
-.nav-tabs .nav-link.active {
-    color: var(--primary-green);
-    background: transparent;
-}
-
-.nav-tabs .nav-link.active::after {
-    content: '';
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: var(--primary-green);
-    animation: tabUnderline 0.3s ease;
-}
-
-@keyframes tabUnderline {
-    from { transform: scaleX(0); }
-    to { transform: scaleX(1); }
-}
-
-/* Progress Bars */
-.progress {
-    height: 1.5rem;
-    border-radius: 10px;
-    background-color: var(--light-gray);
-    overflow: visible;
-}
-
-.progress-bar {
-    background-color: var(--primary-green);
-    position: relative;
-    overflow: visible;
-    transition: width 1s ease-in-out;
-}
-
-.progress-bar::after {
-    content: attr(aria-valuenow)"%";
-    position: absolute;
-    right: -25px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--dark-gray);
-    font-weight: 600;
-}
-
-/* Strategy Comparison Table */
-.strategy-table th {
-    background-color: var(--primary-green);
-    color: white;
-}
-
-.strategy-table td {
-    vertical-align: middle;
-}
-
-.strategy-table tr:nth-child(even) {
-    background-color: rgba(0, 107, 63, 0.05);
-}
-
-/* Card Enhancements */
-.initiative-card {
-    border: 2px solid transparent;
-    transition: all 0.3s ease;
-}
-
-.initiative-card:hover {
-    border-color: var(--primary-green);
-    transform: translateY(-5px);
-}
-
-.card-img-overlay {
-    background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.8));
-}
-
-/* KPI Badges */
-.kpi-badge {
-    background: var(--accent-gold);
-    color: var(--primary-green);
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    display: inline-block;
-    font-weight: 700;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-:root {
-    --primary-color: #1a5f7a;
-    --secondary-color: #f7b32d;
-    --text-color: #333;
-}
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
-}
-    
-.hero-banner {
-    position: relative;
-    min-height: 60vh;
-    overflow: hidden;
-}
-
-.hero-image-container {
+  }
+  
+  .hero-image-container {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-}
-
-.hero-image-container img {
+    z-index: 1;
+  }
+  
+  .hero-image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
-}
-
-.hero-overlay {
+  }
+  
+  .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0;
-}
-
-.z-index-1 {
+    background: linear-gradient(
+      45deg, 
+      rgba(0, 151, 57, 0.9) 0%, /* Zimbabwe Green with 90% opacity */
+      rgba(0, 151, 57, 0.7) 100%
+    );
+    z-index: 2;
+  }
+  
+  .hero-content {
     position: relative;
-    z-index: 1;
+    z-index: 3;
+    color: var(--light-white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .hero-banner {
+      min-height: 50vh;
+    }
+    
+    .hero-content .display-4 {
+      font-size: 2.5rem;
+    }
+    
+    .hero-content .lead {
+      font-size: 1.25rem;
+    }
+  }
+  
+  /* Add to existing CSS */
+.btn-involved {
+  background-color: var(--accent-red) !important;
+  border-color: var(--accent-red) !important;
+  color: var(--light-white) !important;
+  transition: all 0.3s ease;
 }
 
-.btn-outline-light:hover {
-    color: var(--bs-dark) !important;
+.btn-involved:hover {
+  background-color: #c5302a !important;
+  border-color: #c5302a !important;
+  transform: translateY(-2px);
 }
+
+.btn-involved:active {
+  background-color: #ad2823 !important;
+  border-color: #ad2823 !important;
+}
+
+  /* Weather Widget Styles */
+  .weather-widget {
+    background: rgba(252, 209, 22, 0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .weather-widget i {
+    margin-right: 0.5rem;
+  }
+  
+  /* Base Styles */
+  body {
+    color: var(--text-dark);
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* National Color Scheme */
+  .bg-primary { background-color: var(--primary-green) !important; }
+  .text-primary { color: var(--primary-green) !important; }
+  .bg-secondary { background-color: var(--secondary-yellow) !important; }
+  .text-secondary { color: var(--secondary-yellow) !important; }
+  .bg-accent { background-color: var(--accent-red) !important; }
+  .text-accent { color: var(--accent-red) !important; }
+  
+  /* Navigation */
+  .navbar {
+    border-bottom: 3px solid var(--secondary-yellow);
+  }
+  .nav-link:hover {
+    color: var(--secondary-yellow) !important;
+  }
+  
+  /* Hero Section */
+  .hero-banner {
+    min-height: 60vh;
+    position: relative;
+  }
+  .hero-overlay {
+    background: linear-gradient(rgba(0, 151, 57, 0.8), rgba(0, 151, 57, 0.9));
+  }
+  
+  /* Cards */
+  .card {
+    transition: transform 0.3s ease;
+    border: 1px solid var(--primary-green);
+  }
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  .card-title {
+    color: var(--primary-green);
+  }
+  
+  /* Progress Bars */
+  .progress-bar {
+    background-color: var(--primary-green);
+  }
+  
+  /* Footer */
+  footer {
+    background: var(--dark-black);
+    border-top: 3px solid var(--secondary-yellow);
+  }
+  .weather-widget {
+    background: rgba(252, 209, 22, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero-banner {
+      min-height: 50vh;
+    }
+    .display-4 {
+      font-size: 2.5rem;
+    }
+  }
+  
+  /* Dynamic Content Areas */
+  .dynamic-content {
+    position: relative;
+    min-height: 200px;
+  }
+  .loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.9);
+    display: none;
+  }
