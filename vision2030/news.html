@@ -26,32 +26,39 @@
 <body>
     <!-- Navigation Bar -->
     <header class="sticky-top">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Main Navigation">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand d-flex align-items-center" href="../index.html" aria-label="Zimbabwe Vision 2030 Home">
-                    <img src="images/logo.png" alt="Zimbabwe Vision 2030 Logo" width="50" height="50" class="d-inline-block align-text-top">
-                    <span class="ms-2 d-none d-md-inline">Vision 2030</span>
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo.png" alt="Zimbabwe Vision 2030 Logo" width="50" height="50">
+                    Vision 2030
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="mainNavigation">
+                <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <!-- Programs Dropdown -->
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Programs</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="../pages/tsp.html"><i class="fas fa-chart-line me-2"></i>Transitional Stabilisation Programme (TSP)</a></li>
-                                <li><a class="dropdown-item" href="../pages/nds1.html"><i class="fas fa-project-diagram me-2"></i>National Development Strategy 1 (NDS1)</a></li>
-                                <li><a class="dropdown-item" href="../pages/nds2.html"><i class="fas fa-globe me-2"></i>National Development Strategy 2 (NDS2)</a></li>
+                                <li><a class="dropdown-item" href="pages/tsp.html">Transitional Stabilisation Programme (TSP)</a></li>
+                                <li><a class="dropdown-item" href="pages/nds1.html">National Development Strategy 1 (NDS1)</a></li>
+                                <li><a class="dropdown-item" href="pages/nds2.html">National Development Strategy 2 (NDS2)</a></li>
                             </ul>
                         </li>
-                        <!-- Additional Navigation Items -->
-                        <!-- Sectors, Ministries, and Resources omitted for brevity -->
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="../pages/news.html"><i class="fas fa-newspaper me-2"></i>News</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Sectors</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="pages/agriculture.html">Agriculture</a></li>
+                                <li><a class="dropdown-item" href="pages/mining.html">Mining</a></li>
+                                <li><a class="dropdown-item" href="pages/tourism.html">Tourism</a></li>
+                            </ul>
                         </li>
+                        <li class="nav-item"><a class="nav-link" href="pages/news.html">News</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/events.html">Events</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/contact.html">Contact</a></li>
                     </ul>
                 </div>
             </div>

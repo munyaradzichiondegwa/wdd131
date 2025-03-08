@@ -15,6 +15,20 @@ body {
   color: var(--dark-gray);
 }
 
+/* Navbar Customization for Consistency */
+.navbar {
+  background-color: var(--white);
+}
+
+.navbar .nav-link {
+  color: var(--dark-gray); /* Ensure navbar links are consistent */
+  transition: color 0.3s ease; /* Smooth transitions for hover effects */
+}
+
+.navbar .nav-link:hover {
+  color: var(--primary-green); /* Color on hover */
+}
+
 /* Strategy Tabs */
 .strategy-tabs {
   border-bottom: 3px solid var(--primary-green);
@@ -54,7 +68,6 @@ body {
   height: 1.5rem;
   border-radius: 10px;
   background-color: var(--light-gray);
-  overflow: visible;
 }
 
 .progress-bar {
@@ -65,7 +78,7 @@ body {
 }
 
 .progress-bar::after {
-  content: attr(aria-valuenow)"%";
+  content: attr(aria-valuenow) "%";
   position: absolute;
   right: -25px;
   top: 50%;
@@ -115,15 +128,13 @@ body {
 }
 
 /* Responsive Table */
-@media (max-width: 768px) {
-  .table-responsive {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-  }
-  
-  .strategy-table {
-      min-width: 600px;
-  }
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.strategy-table {
+  min-width: 600px; /* Minimal width for readability */
 }
 
 /* Animation Styles */
@@ -164,17 +175,13 @@ body {
 /* Responsive Media Elements */
 @media (max-width: 768px) {
   .hero-banner {
-      height: 40vh;
+    height: 40vh;
   }
 }
 
 /* Table and Print Button */
 table {
   margin-top: 20px;
-}
-
-.table-responsive {
-  overflow-x: auto;
 }
 
 .print-strategy {
@@ -208,13 +215,8 @@ table {
 /* Additional Responsiveness */
 @media (max-width: 600px) {
   .kpi-badge {
-      font-size: 12px;
+    font-size: 12px;
   }
-}
-
-.table-responsive {
-  max-height: 300px; /* Adjust based on your design */
-  overflow-y: auto;
 }
 
 /* Card Margins */
